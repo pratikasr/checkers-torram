@@ -1,0 +1,15 @@
+syntax = "proto3";
+package checkerstorram.checkerstorram;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "checkers-torram/x/checkerstorram/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "checkerstorram/x/checkerstorram/Params";
+  option (gogoproto.equal) = true;
+
+  
+}
