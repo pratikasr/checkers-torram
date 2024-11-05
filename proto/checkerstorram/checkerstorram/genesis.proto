@@ -4,6 +4,7 @@ package checkerstorram.checkerstorram;
 import "amino/amino.proto";
 import "gogoproto/gogo.proto";
 import "checkerstorram/checkerstorram/params.proto";
+import "checkerstorram/checkerstorram/stored_game.proto";
 
 option go_package = "checkers-torram/x/checkerstorram/types";
 
@@ -11,6 +12,15 @@ option go_package = "checkers-torram/x/checkerstorram/types";
 message GenesisState {
   // params defines all the parameters of the module.
   Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+
+  // Stores the current game count
+  uint64 game_count = 2;
+
+  // List of all stored games at genesis
+  repeated StoredGame stored_games = 3 [
     (gogoproto.nullable) = false,
     (amino.dont_omitempty) = true
   ];

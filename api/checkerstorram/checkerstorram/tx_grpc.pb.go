@@ -19,93 +19,132 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Msg_UpdateParams_FullMethodName = "/checkerstorram.checkerstorram.Msg/UpdateParams"
+	CheckersTorram_UpdateParams_FullMethodName     = "/checkerstorram.checkerstorram.CheckersTorram/UpdateParams"
+	CheckersTorram_CheckersCreateGm_FullMethodName = "/checkerstorram.checkerstorram.CheckersTorram/CheckersCreateGm"
 )
 
-// MsgClient is the client API for Msg service.
+// CheckersTorramClient is the client API for CheckersTorram service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type MsgClient interface {
+type CheckersTorramClient interface {
 	// UpdateParams defines a (governance) operation for updating the module
 	// parameters. The authority defaults to the x/gov module account.
 	UpdateParams(ctx context.Context, in *MsgUpdateParams, opts ...grpc.CallOption) (*MsgUpdateParamsResponse, error)
+	// CheckersCreateGm creates a new game
+	CheckersCreateGm(ctx context.Context, in *ReqCheckersTorram, opts ...grpc.CallOption) (*ResCheckersTorram, error)
 }
 
-type msgClient struct {
+type checkersTorramClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewMsgClient(cc grpc.ClientConnInterface) MsgClient {
-	return &msgClient{cc}
+func NewCheckersTorramClient(cc grpc.ClientConnInterface) CheckersTorramClient {
+	return &checkersTorramClient{cc}
 }
 
-func (c *msgClient) UpdateParams(ctx context.Context, in *MsgUpdateParams, opts ...grpc.CallOption) (*MsgUpdateParamsResponse, error) {
+func (c *checkersTorramClient) UpdateParams(ctx context.Context, in *MsgUpdateParams, opts ...grpc.CallOption) (*MsgUpdateParamsResponse, error) {
 	out := new(MsgUpdateParamsResponse)
-	err := c.cc.Invoke(ctx, Msg_UpdateParams_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, CheckersTorram_UpdateParams_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// MsgServer is the server API for Msg service.
-// All implementations must embed UnimplementedMsgServer
+func (c *checkersTorramClient) CheckersCreateGm(ctx context.Context, in *ReqCheckersTorram, opts ...grpc.CallOption) (*ResCheckersTorram, error) {
+	out := new(ResCheckersTorram)
+	err := c.cc.Invoke(ctx, CheckersTorram_CheckersCreateGm_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// CheckersTorramServer is the server API for CheckersTorram service.
+// All implementations must embed UnimplementedCheckersTorramServer
 // for forward compatibility
-type MsgServer interface {
+type CheckersTorramServer interface {
 	// UpdateParams defines a (governance) operation for updating the module
 	// parameters. The authority defaults to the x/gov module account.
 	UpdateParams(context.Context, *MsgUpdateParams) (*MsgUpdateParamsResponse, error)
-	mustEmbedUnimplementedMsgServer()
+	// CheckersCreateGm creates a new game
+	CheckersCreateGm(context.Context, *ReqCheckersTorram) (*ResCheckersTorram, error)
+	mustEmbedUnimplementedCheckersTorramServer()
 }
 
-// UnimplementedMsgServer must be embedded to have forward compatible implementations.
-type UnimplementedMsgServer struct {
+// UnimplementedCheckersTorramServer must be embedded to have forward compatible implementations.
+type UnimplementedCheckersTorramServer struct {
 }
 
-func (UnimplementedMsgServer) UpdateParams(context.Context, *MsgUpdateParams) (*MsgUpdateParamsResponse, error) {
+func (UnimplementedCheckersTorramServer) UpdateParams(context.Context, *MsgUpdateParams) (*MsgUpdateParamsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateParams not implemented")
 }
-func (UnimplementedMsgServer) mustEmbedUnimplementedMsgServer() {}
+func (UnimplementedCheckersTorramServer) CheckersCreateGm(context.Context, *ReqCheckersTorram) (*ResCheckersTorram, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CheckersCreateGm not implemented")
+}
+func (UnimplementedCheckersTorramServer) mustEmbedUnimplementedCheckersTorramServer() {}
 
-// UnsafeMsgServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to MsgServer will
+// UnsafeCheckersTorramServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to CheckersTorramServer will
 // result in compilation errors.
-type UnsafeMsgServer interface {
-	mustEmbedUnimplementedMsgServer()
+type UnsafeCheckersTorramServer interface {
+	mustEmbedUnimplementedCheckersTorramServer()
 }
 
-func RegisterMsgServer(s grpc.ServiceRegistrar, srv MsgServer) {
-	s.RegisterService(&Msg_ServiceDesc, srv)
+func RegisterCheckersTorramServer(s grpc.ServiceRegistrar, srv CheckersTorramServer) {
+	s.RegisterService(&CheckersTorram_ServiceDesc, srv)
 }
 
-func _Msg_UpdateParams_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CheckersTorram_UpdateParams_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(MsgUpdateParams)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).UpdateParams(ctx, in)
+		return srv.(CheckersTorramServer).UpdateParams(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_UpdateParams_FullMethodName,
+		FullMethod: CheckersTorram_UpdateParams_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).UpdateParams(ctx, req.(*MsgUpdateParams))
+		return srv.(CheckersTorramServer).UpdateParams(ctx, req.(*MsgUpdateParams))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// Msg_ServiceDesc is the grpc.ServiceDesc for Msg service.
+func _CheckersTorram_CheckersCreateGm_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqCheckersTorram)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CheckersTorramServer).CheckersCreateGm(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: CheckersTorram_CheckersCreateGm_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CheckersTorramServer).CheckersCreateGm(ctx, req.(*ReqCheckersTorram))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// CheckersTorram_ServiceDesc is the grpc.ServiceDesc for CheckersTorram service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var Msg_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "checkerstorram.checkerstorram.Msg",
-	HandlerType: (*MsgServer)(nil),
+var CheckersTorram_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "checkerstorram.checkerstorram.CheckersTorram",
+	HandlerType: (*CheckersTorramServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "UpdateParams",
-			Handler:    _Msg_UpdateParams_Handler,
+			Handler:    _CheckersTorram_UpdateParams_Handler,
+		},
+		{
+			MethodName: "CheckersCreateGm",
+			Handler:    _CheckersTorram_CheckersCreateGm_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

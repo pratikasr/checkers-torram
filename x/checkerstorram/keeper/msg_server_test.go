@@ -11,7 +11,7 @@ import (
 	"checkers-torram/x/checkerstorram/types"
 )
 
-func setupMsgServer(t testing.TB) (keeper.Keeper, types.MsgServer, context.Context) {
+func setupMsgServer(t testing.TB) (keeper.Keeper, types.CheckersTorramServer, context.Context) {
 	k, ctx := keepertest.CheckerstorramKeeper(t)
 	return k, keeper.NewMsgServerImpl(k), ctx
 }

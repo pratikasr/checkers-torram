@@ -17,16 +17,33 @@ func (am AppModule) AutoCLIOptions() *autocliv1.ModuleOptions {
 					Use:       "params",
 					Short:     "Shows the parameters of the module",
 				},
+				{
+					RpcMethod: "GetGame",
+					Use:       "get-game [id]",
+					Short:     "Get stored game by id",
+					PositionalArgs: []*autocliv1.PositionalArgDescriptor{
+						{ProtoField: "index"},
+					},
+				},
 				// this line is used by ignite scaffolding # autocli/query
 			},
 		},
 		Tx: &autocliv1.ServiceCommandDescriptor{
-			Service:              modulev1.Msg_ServiceDesc.ServiceName,
+			Service:              modulev1.CheckersTorram_ServiceDesc.ServiceName,
 			EnhanceCustomCommand: true, // only required if you want to use the custom command
 			RpcCommandOptions: []*autocliv1.RpcCommandOptions{
 				{
 					RpcMethod: "UpdateParams",
 					Skip:      true, // skipped because authority gated
+				},
+				{
+					RpcMethod: "CheckersCreateGm",
+					Use:       "create-game [black] [red]",
+					Short:     "Create a new game",
+					PositionalArgs: []*autocliv1.PositionalArgDescriptor{
+						{ProtoField: "black"},
+						{ProtoField: "red"},
+					},
 				},
 				// this line is used by ignite scaffolding # autocli/tx
 			},

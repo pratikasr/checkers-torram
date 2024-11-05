@@ -10,12 +10,14 @@ import "checkerstorram/checkerstorram/params.proto";
 option go_package = "checkers-torram/x/checkerstorram/types";
 
 // Msg defines the Msg service.
-service Msg {
+service CheckersTorram {
   option (cosmos.msg.v1.service) = true;
 
   // UpdateParams defines a (governance) operation for updating the module
   // parameters. The authority defaults to the x/gov module account.
   rpc UpdateParams(MsgUpdateParams) returns (MsgUpdateParamsResponse);
+  // CheckersCreateGm creates a new game
+  rpc CheckersCreateGm(ReqCheckersTorram) returns (ResCheckersTorram);
 }
 
 // MsgUpdateParams is the Msg/UpdateParams request type.
@@ -38,3 +40,17 @@ message MsgUpdateParams {
 // MsgUpdateParamsResponse defines the response structure for executing a
 // MsgUpdateParams message.
 message MsgUpdateParamsResponse {}
+
+// ReqCheckersTorram is the request for creating a new game
+message ReqCheckersTorram {
+  option (cosmos.msg.v1.signer) = "creator";
+
+  string creator = 1;
+  string black = 2 [(cosmos_proto.scalar) = "cosmos.AddressString"];
+  string red = 3 [(cosmos_proto.scalar) = "cosmos.AddressString"];
+}
+
+// ResCheckersTorram is returned after creating a new game
+message ResCheckersTorram {
+  string game_index = 1;
+}

@@ -871,6 +871,974 @@ func (x *fastReflection_MsgUpdateParamsResponse) ProtoMethods() *protoiface.Meth
 	}
 }
 
+var (
+	md_ReqCheckersTorram         protoreflect.MessageDescriptor
+	fd_ReqCheckersTorram_creator protoreflect.FieldDescriptor
+	fd_ReqCheckersTorram_black   protoreflect.FieldDescriptor
+	fd_ReqCheckersTorram_red     protoreflect.FieldDescriptor
+)
+
+func init() {
+	file_checkerstorram_checkerstorram_tx_proto_init()
+	md_ReqCheckersTorram = File_checkerstorram_checkerstorram_tx_proto.Messages().ByName("ReqCheckersTorram")
+	fd_ReqCheckersTorram_creator = md_ReqCheckersTorram.Fields().ByName("creator")
+	fd_ReqCheckersTorram_black = md_ReqCheckersTorram.Fields().ByName("black")
+	fd_ReqCheckersTorram_red = md_ReqCheckersTorram.Fields().ByName("red")
+}
+
+var _ protoreflect.Message = (*fastReflection_ReqCheckersTorram)(nil)
+
+type fastReflection_ReqCheckersTorram ReqCheckersTorram
+
+func (x *ReqCheckersTorram) ProtoReflect() protoreflect.Message {
+	return (*fastReflection_ReqCheckersTorram)(x)
+}
+
+func (x *ReqCheckersTorram) slowProtoReflect() protoreflect.Message {
+	mi := &file_checkerstorram_checkerstorram_tx_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+var _fastReflection_ReqCheckersTorram_messageType fastReflection_ReqCheckersTorram_messageType
+var _ protoreflect.MessageType = fastReflection_ReqCheckersTorram_messageType{}
+
+type fastReflection_ReqCheckersTorram_messageType struct{}
+
+func (x fastReflection_ReqCheckersTorram_messageType) Zero() protoreflect.Message {
+	return (*fastReflection_ReqCheckersTorram)(nil)
+}
+func (x fastReflection_ReqCheckersTorram_messageType) New() protoreflect.Message {
+	return new(fastReflection_ReqCheckersTorram)
+}
+func (x fastReflection_ReqCheckersTorram_messageType) Descriptor() protoreflect.MessageDescriptor {
+	return md_ReqCheckersTorram
+}
+
+// Descriptor returns message descriptor, which contains only the protobuf
+// type information for the message.
+func (x *fastReflection_ReqCheckersTorram) Descriptor() protoreflect.MessageDescriptor {
+	return md_ReqCheckersTorram
+}
+
+// Type returns the message type, which encapsulates both Go and protobuf
+// type information. If the Go type information is not needed,
+// it is recommended that the message descriptor be used instead.
+func (x *fastReflection_ReqCheckersTorram) Type() protoreflect.MessageType {
+	return _fastReflection_ReqCheckersTorram_messageType
+}
+
+// New returns a newly allocated and mutable empty message.
+func (x *fastReflection_ReqCheckersTorram) New() protoreflect.Message {
+	return new(fastReflection_ReqCheckersTorram)
+}
+
+// Interface unwraps the message reflection interface and
+// returns the underlying ProtoMessage interface.
+func (x *fastReflection_ReqCheckersTorram) Interface() protoreflect.ProtoMessage {
+	return (*ReqCheckersTorram)(x)
+}
+
+// Range iterates over every populated field in an undefined order,
+// calling f for each field descriptor and value encountered.
+// Range returns immediately if f returns false.
+// While iterating, mutating operations may only be performed
+// on the current field descriptor.
+func (x *fastReflection_ReqCheckersTorram) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
+	if x.Creator != "" {
+		value := protoreflect.ValueOfString(x.Creator)
+		if !f(fd_ReqCheckersTorram_creator, value) {
+			return
+		}
+	}
+	if x.Black != "" {
+		value := protoreflect.ValueOfString(x.Black)
+		if !f(fd_ReqCheckersTorram_black, value) {
+			return
+		}
+	}
+	if x.Red != "" {
+		value := protoreflect.ValueOfString(x.Red)
+		if !f(fd_ReqCheckersTorram_red, value) {
+			return
+		}
+	}
+}
+
+// Has reports whether a field is populated.
+//
+// Some fields have the property of nullability where it is possible to
+// distinguish between the default value of a field and whether the field
+// was explicitly populated with the default value. Singular message fields,
+// member fields of a oneof, and proto2 scalar fields are nullable. Such
+// fields are populated only if explicitly set.
+//
+// In other cases (aside from the nullable cases above),
+// a proto3 scalar field is populated if it contains a non-zero value, and
+// a repeated field is populated if it is non-empty.
+func (x *fastReflection_ReqCheckersTorram) Has(fd protoreflect.FieldDescriptor) bool {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.creator":
+		return x.Creator != ""
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.black":
+		return x.Black != ""
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.red":
+		return x.Red != ""
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ReqCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ReqCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// Clear clears the field such that a subsequent Has call reports false.
+//
+// Clearing an extension field clears both the extension type and value
+// associated with the given field number.
+//
+// Clear is a mutating operation and unsafe for concurrent use.
+func (x *fastReflection_ReqCheckersTorram) Clear(fd protoreflect.FieldDescriptor) {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.creator":
+		x.Creator = ""
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.black":
+		x.Black = ""
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.red":
+		x.Red = ""
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ReqCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ReqCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// Get retrieves the value for a field.
+//
+// For unpopulated scalars, it returns the default value, where
+// the default value of a bytes scalar is guaranteed to be a copy.
+// For unpopulated composite types, it returns an empty, read-only view
+// of the value; to obtain a mutable reference, use Mutable.
+func (x *fastReflection_ReqCheckersTorram) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
+	switch descriptor.FullName() {
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.creator":
+		value := x.Creator
+		return protoreflect.ValueOfString(value)
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.black":
+		value := x.Black
+		return protoreflect.ValueOfString(value)
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.red":
+		value := x.Red
+		return protoreflect.ValueOfString(value)
+	default:
+		if descriptor.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ReqCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ReqCheckersTorram does not contain field %s", descriptor.FullName()))
+	}
+}
+
+// Set stores the value for a field.
+//
+// For a field belonging to a oneof, it implicitly clears any other field
+// that may be currently set within the same oneof.
+// For extension fields, it implicitly stores the provided ExtensionType.
+// When setting a composite type, it is unspecified whether the stored value
+// aliases the source's memory in any way. If the composite value is an
+// empty, read-only value, then it panics.
+//
+// Set is a mutating operation and unsafe for concurrent use.
+func (x *fastReflection_ReqCheckersTorram) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.creator":
+		x.Creator = value.Interface().(string)
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.black":
+		x.Black = value.Interface().(string)
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.red":
+		x.Red = value.Interface().(string)
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ReqCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ReqCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// Mutable returns a mutable reference to a composite type.
+//
+// If the field is unpopulated, it may allocate a composite value.
+// For a field belonging to a oneof, it implicitly clears any other field
+// that may be currently set within the same oneof.
+// For extension fields, it implicitly stores the provided ExtensionType
+// if not already stored.
+// It panics if the field does not contain a composite type.
+//
+// Mutable is a mutating operation and unsafe for concurrent use.
+func (x *fastReflection_ReqCheckersTorram) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.creator":
+		panic(fmt.Errorf("field creator of message checkerstorram.checkerstorram.ReqCheckersTorram is not mutable"))
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.black":
+		panic(fmt.Errorf("field black of message checkerstorram.checkerstorram.ReqCheckersTorram is not mutable"))
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.red":
+		panic(fmt.Errorf("field red of message checkerstorram.checkerstorram.ReqCheckersTorram is not mutable"))
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ReqCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ReqCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// NewField returns a new value that is assignable to the field
+// for the given descriptor. For scalars, this returns the default value.
+// For lists, maps, and messages, this returns a new, empty, mutable value.
+func (x *fastReflection_ReqCheckersTorram) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.creator":
+		return protoreflect.ValueOfString("")
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.black":
+		return protoreflect.ValueOfString("")
+	case "checkerstorram.checkerstorram.ReqCheckersTorram.red":
+		return protoreflect.ValueOfString("")
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ReqCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ReqCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// WhichOneof reports which field within the oneof is populated,
+// returning nil if none are populated.
+// It panics if the oneof descriptor does not belong to this message.
+func (x *fastReflection_ReqCheckersTorram) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
+	switch d.FullName() {
+	default:
+		panic(fmt.Errorf("%s is not a oneof field in checkerstorram.checkerstorram.ReqCheckersTorram", d.FullName()))
+	}
+	panic("unreachable")
+}
+
+// GetUnknown retrieves the entire list of unknown fields.
+// The caller may only mutate the contents of the RawFields
+// if the mutated bytes are stored back into the message with SetUnknown.
+func (x *fastReflection_ReqCheckersTorram) GetUnknown() protoreflect.RawFields {
+	return x.unknownFields
+}
+
+// SetUnknown stores an entire list of unknown fields.
+// The raw fields must be syntactically valid according to the wire format.
+// An implementation may panic if this is not the case.
+// Once stored, the caller must not mutate the content of the RawFields.
+// An empty RawFields may be passed to clear the fields.
+//
+// SetUnknown is a mutating operation and unsafe for concurrent use.
+func (x *fastReflection_ReqCheckersTorram) SetUnknown(fields protoreflect.RawFields) {
+	x.unknownFields = fields
+}
+
+// IsValid reports whether the message is valid.
+//
+// An invalid message is an empty, read-only value.
+//
+// An invalid message often corresponds to a nil pointer of the concrete
+// message type, but the details are implementation dependent.
+// Validity is not part of the protobuf data model, and may not
+// be preserved in marshaling or other operations.
+func (x *fastReflection_ReqCheckersTorram) IsValid() bool {
+	return x != nil
+}
+
+// ProtoMethods returns optional fastReflectionFeature-path implementations of various operations.
+// This method may return nil.
+//
+// The returned methods type is identical to
+// "google.golang.org/protobuf/runtime/protoiface".Methods.
+// Consult the protoiface package documentation for details.
+func (x *fastReflection_ReqCheckersTorram) ProtoMethods() *protoiface.Methods {
+	size := func(input protoiface.SizeInput) protoiface.SizeOutput {
+		x := input.Message.Interface().(*ReqCheckersTorram)
+		if x == nil {
+			return protoiface.SizeOutput{
+				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+				Size:              0,
+			}
+		}
+		options := runtime.SizeInputToOptions(input)
+		_ = options
+		var n int
+		var l int
+		_ = l
+		l = len(x.Creator)
+		if l > 0 {
+			n += 1 + l + runtime.Sov(uint64(l))
+		}
+		l = len(x.Black)
+		if l > 0 {
+			n += 1 + l + runtime.Sov(uint64(l))
+		}
+		l = len(x.Red)
+		if l > 0 {
+			n += 1 + l + runtime.Sov(uint64(l))
+		}
+		if x.unknownFields != nil {
+			n += len(x.unknownFields)
+		}
+		return protoiface.SizeOutput{
+			NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+			Size:              n,
+		}
+	}
+
+	marshal := func(input protoiface.MarshalInput) (protoiface.MarshalOutput, error) {
+		x := input.Message.Interface().(*ReqCheckersTorram)
+		if x == nil {
+			return protoiface.MarshalOutput{
+				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+				Buf:               input.Buf,
+			}, nil
+		}
+		options := runtime.MarshalInputToOptions(input)
+		_ = options
+		size := options.Size(x)
+		dAtA := make([]byte, size)
+		i := len(dAtA)
+		_ = i
+		var l int
+		_ = l
+		if x.unknownFields != nil {
+			i -= len(x.unknownFields)
+			copy(dAtA[i:], x.unknownFields)
+		}
+		if len(x.Red) > 0 {
+			i -= len(x.Red)
+			copy(dAtA[i:], x.Red)
+			i = runtime.EncodeVarint(dAtA, i, uint64(len(x.Red)))
+			i--
+			dAtA[i] = 0x1a
+		}
+		if len(x.Black) > 0 {
+			i -= len(x.Black)
+			copy(dAtA[i:], x.Black)
+			i = runtime.EncodeVarint(dAtA, i, uint64(len(x.Black)))
+			i--
+			dAtA[i] = 0x12
+		}
+		if len(x.Creator) > 0 {
+			i -= len(x.Creator)
+			copy(dAtA[i:], x.Creator)
+			i = runtime.EncodeVarint(dAtA, i, uint64(len(x.Creator)))
+			i--
+			dAtA[i] = 0xa
+		}
+		if input.Buf != nil {
+			input.Buf = append(input.Buf, dAtA...)
+		} else {
+			input.Buf = dAtA
+		}
+		return protoiface.MarshalOutput{
+			NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+			Buf:               input.Buf,
+		}, nil
+	}
+	unmarshal := func(input protoiface.UnmarshalInput) (protoiface.UnmarshalOutput, error) {
+		x := input.Message.Interface().(*ReqCheckersTorram)
+		if x == nil {
+			return protoiface.UnmarshalOutput{
+				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+				Flags:             input.Flags,
+			}, nil
+		}
+		options := runtime.UnmarshalInputToOptions(input)
+		_ = options
+		dAtA := input.Buf
+		l := len(dAtA)
+		iNdEx := 0
+		for iNdEx < l {
+			preIndex := iNdEx
+			var wire uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
+				}
+				if iNdEx >= l {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				wire |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			fieldNum := int32(wire >> 3)
+			wireType := int(wire & 0x7)
+			if wireType == 4 {
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: ReqCheckersTorram: wiretype end group for non-group")
+			}
+			if fieldNum <= 0 {
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: ReqCheckersTorram: illegal tag %d (wire type %d)", fieldNum, wire)
+			}
+			switch fieldNum {
+			case 1:
+				if wireType != 2 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: wrong wireType = %d for field Creator", wireType)
+				}
+				var stringLen uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
+					}
+					if iNdEx >= l {
+						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					stringLen |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				intStringLen := int(stringLen)
+				if intStringLen < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				postIndex := iNdEx + intStringLen
+				if postIndex < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				if postIndex > l {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+				}
+				x.Creator = string(dAtA[iNdEx:postIndex])
+				iNdEx = postIndex
+			case 2:
+				if wireType != 2 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: wrong wireType = %d for field Black", wireType)
+				}
+				var stringLen uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
+					}
+					if iNdEx >= l {
+						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					stringLen |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				intStringLen := int(stringLen)
+				if intStringLen < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				postIndex := iNdEx + intStringLen
+				if postIndex < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				if postIndex > l {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+				}
+				x.Black = string(dAtA[iNdEx:postIndex])
+				iNdEx = postIndex
+			case 3:
+				if wireType != 2 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: wrong wireType = %d for field Red", wireType)
+				}
+				var stringLen uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
+					}
+					if iNdEx >= l {
+						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					stringLen |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				intStringLen := int(stringLen)
+				if intStringLen < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				postIndex := iNdEx + intStringLen
+				if postIndex < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				if postIndex > l {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+				}
+				x.Red = string(dAtA[iNdEx:postIndex])
+				iNdEx = postIndex
+			default:
+				iNdEx = preIndex
+				skippy, err := runtime.Skip(dAtA[iNdEx:])
+				if err != nil {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, err
+				}
+				if (skippy < 0) || (iNdEx+skippy) < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				if (iNdEx + skippy) > l {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+				}
+				if !options.DiscardUnknown {
+					x.unknownFields = append(x.unknownFields, dAtA[iNdEx:iNdEx+skippy]...)
+				}
+				iNdEx += skippy
+			}
+		}
+
+		if iNdEx > l {
+			return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+		}
+		return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, nil
+	}
+	return &protoiface.Methods{
+		NoUnkeyedLiterals: struct{}{},
+		Flags:             protoiface.SupportMarshalDeterministic | protoiface.SupportUnmarshalDiscardUnknown,
+		Size:              size,
+		Marshal:           marshal,
+		Unmarshal:         unmarshal,
+		Merge:             nil,
+		CheckInitialized:  nil,
+	}
+}
+
+var (
+	md_ResCheckersTorram            protoreflect.MessageDescriptor
+	fd_ResCheckersTorram_game_index protoreflect.FieldDescriptor
+)
+
+func init() {
+	file_checkerstorram_checkerstorram_tx_proto_init()
+	md_ResCheckersTorram = File_checkerstorram_checkerstorram_tx_proto.Messages().ByName("ResCheckersTorram")
+	fd_ResCheckersTorram_game_index = md_ResCheckersTorram.Fields().ByName("game_index")
+}
+
+var _ protoreflect.Message = (*fastReflection_ResCheckersTorram)(nil)
+
+type fastReflection_ResCheckersTorram ResCheckersTorram
+
+func (x *ResCheckersTorram) ProtoReflect() protoreflect.Message {
+	return (*fastReflection_ResCheckersTorram)(x)
+}
+
+func (x *ResCheckersTorram) slowProtoReflect() protoreflect.Message {
+	mi := &file_checkerstorram_checkerstorram_tx_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+var _fastReflection_ResCheckersTorram_messageType fastReflection_ResCheckersTorram_messageType
+var _ protoreflect.MessageType = fastReflection_ResCheckersTorram_messageType{}
+
+type fastReflection_ResCheckersTorram_messageType struct{}
+
+func (x fastReflection_ResCheckersTorram_messageType) Zero() protoreflect.Message {
+	return (*fastReflection_ResCheckersTorram)(nil)
+}
+func (x fastReflection_ResCheckersTorram_messageType) New() protoreflect.Message {
+	return new(fastReflection_ResCheckersTorram)
+}
+func (x fastReflection_ResCheckersTorram_messageType) Descriptor() protoreflect.MessageDescriptor {
+	return md_ResCheckersTorram
+}
+
+// Descriptor returns message descriptor, which contains only the protobuf
+// type information for the message.
+func (x *fastReflection_ResCheckersTorram) Descriptor() protoreflect.MessageDescriptor {
+	return md_ResCheckersTorram
+}
+
+// Type returns the message type, which encapsulates both Go and protobuf
+// type information. If the Go type information is not needed,
+// it is recommended that the message descriptor be used instead.
+func (x *fastReflection_ResCheckersTorram) Type() protoreflect.MessageType {
+	return _fastReflection_ResCheckersTorram_messageType
+}
+
+// New returns a newly allocated and mutable empty message.
+func (x *fastReflection_ResCheckersTorram) New() protoreflect.Message {
+	return new(fastReflection_ResCheckersTorram)
+}
+
+// Interface unwraps the message reflection interface and
+// returns the underlying ProtoMessage interface.
+func (x *fastReflection_ResCheckersTorram) Interface() protoreflect.ProtoMessage {
+	return (*ResCheckersTorram)(x)
+}
+
+// Range iterates over every populated field in an undefined order,
+// calling f for each field descriptor and value encountered.
+// Range returns immediately if f returns false.
+// While iterating, mutating operations may only be performed
+// on the current field descriptor.
+func (x *fastReflection_ResCheckersTorram) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
+	if x.GameIndex != "" {
+		value := protoreflect.ValueOfString(x.GameIndex)
+		if !f(fd_ResCheckersTorram_game_index, value) {
+			return
+		}
+	}
+}
+
+// Has reports whether a field is populated.
+//
+// Some fields have the property of nullability where it is possible to
+// distinguish between the default value of a field and whether the field
+// was explicitly populated with the default value. Singular message fields,
+// member fields of a oneof, and proto2 scalar fields are nullable. Such
+// fields are populated only if explicitly set.
+//
+// In other cases (aside from the nullable cases above),
+// a proto3 scalar field is populated if it contains a non-zero value, and
+// a repeated field is populated if it is non-empty.
+func (x *fastReflection_ResCheckersTorram) Has(fd protoreflect.FieldDescriptor) bool {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ResCheckersTorram.game_index":
+		return x.GameIndex != ""
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ResCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ResCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// Clear clears the field such that a subsequent Has call reports false.
+//
+// Clearing an extension field clears both the extension type and value
+// associated with the given field number.
+//
+// Clear is a mutating operation and unsafe for concurrent use.
+func (x *fastReflection_ResCheckersTorram) Clear(fd protoreflect.FieldDescriptor) {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ResCheckersTorram.game_index":
+		x.GameIndex = ""
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ResCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ResCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// Get retrieves the value for a field.
+//
+// For unpopulated scalars, it returns the default value, where
+// the default value of a bytes scalar is guaranteed to be a copy.
+// For unpopulated composite types, it returns an empty, read-only view
+// of the value; to obtain a mutable reference, use Mutable.
+func (x *fastReflection_ResCheckersTorram) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
+	switch descriptor.FullName() {
+	case "checkerstorram.checkerstorram.ResCheckersTorram.game_index":
+		value := x.GameIndex
+		return protoreflect.ValueOfString(value)
+	default:
+		if descriptor.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ResCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ResCheckersTorram does not contain field %s", descriptor.FullName()))
+	}
+}
+
+// Set stores the value for a field.
+//
+// For a field belonging to a oneof, it implicitly clears any other field
+// that may be currently set within the same oneof.
+// For extension fields, it implicitly stores the provided ExtensionType.
+// When setting a composite type, it is unspecified whether the stored value
+// aliases the source's memory in any way. If the composite value is an
+// empty, read-only value, then it panics.
+//
+// Set is a mutating operation and unsafe for concurrent use.
+func (x *fastReflection_ResCheckersTorram) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ResCheckersTorram.game_index":
+		x.GameIndex = value.Interface().(string)
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ResCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ResCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// Mutable returns a mutable reference to a composite type.
+//
+// If the field is unpopulated, it may allocate a composite value.
+// For a field belonging to a oneof, it implicitly clears any other field
+// that may be currently set within the same oneof.
+// For extension fields, it implicitly stores the provided ExtensionType
+// if not already stored.
+// It panics if the field does not contain a composite type.
+//
+// Mutable is a mutating operation and unsafe for concurrent use.
+func (x *fastReflection_ResCheckersTorram) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ResCheckersTorram.game_index":
+		panic(fmt.Errorf("field game_index of message checkerstorram.checkerstorram.ResCheckersTorram is not mutable"))
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ResCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ResCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// NewField returns a new value that is assignable to the field
+// for the given descriptor. For scalars, this returns the default value.
+// For lists, maps, and messages, this returns a new, empty, mutable value.
+func (x *fastReflection_ResCheckersTorram) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
+	switch fd.FullName() {
+	case "checkerstorram.checkerstorram.ResCheckersTorram.game_index":
+		return protoreflect.ValueOfString("")
+	default:
+		if fd.IsExtension() {
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.ResCheckersTorram"))
+		}
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.ResCheckersTorram does not contain field %s", fd.FullName()))
+	}
+}
+
+// WhichOneof reports which field within the oneof is populated,
+// returning nil if none are populated.
+// It panics if the oneof descriptor does not belong to this message.
+func (x *fastReflection_ResCheckersTorram) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
+	switch d.FullName() {
+	default:
+		panic(fmt.Errorf("%s is not a oneof field in checkerstorram.checkerstorram.ResCheckersTorram", d.FullName()))
+	}
+	panic("unreachable")
+}
+
+// GetUnknown retrieves the entire list of unknown fields.
+// The caller may only mutate the contents of the RawFields
+// if the mutated bytes are stored back into the message with SetUnknown.
+func (x *fastReflection_ResCheckersTorram) GetUnknown() protoreflect.RawFields {
+	return x.unknownFields
+}
+
+// SetUnknown stores an entire list of unknown fields.
+// The raw fields must be syntactically valid according to the wire format.
+// An implementation may panic if this is not the case.
+// Once stored, the caller must not mutate the content of the RawFields.
+// An empty RawFields may be passed to clear the fields.
+//
+// SetUnknown is a mutating operation and unsafe for concurrent use.
+func (x *fastReflection_ResCheckersTorram) SetUnknown(fields protoreflect.RawFields) {
+	x.unknownFields = fields
+}
+
+// IsValid reports whether the message is valid.
+//
+// An invalid message is an empty, read-only value.
+//
+// An invalid message often corresponds to a nil pointer of the concrete
+// message type, but the details are implementation dependent.
+// Validity is not part of the protobuf data model, and may not
+// be preserved in marshaling or other operations.
+func (x *fastReflection_ResCheckersTorram) IsValid() bool {
+	return x != nil
+}
+
+// ProtoMethods returns optional fastReflectionFeature-path implementations of various operations.
+// This method may return nil.
+//
+// The returned methods type is identical to
+// "google.golang.org/protobuf/runtime/protoiface".Methods.
+// Consult the protoiface package documentation for details.
+func (x *fastReflection_ResCheckersTorram) ProtoMethods() *protoiface.Methods {
+	size := func(input protoiface.SizeInput) protoiface.SizeOutput {
+		x := input.Message.Interface().(*ResCheckersTorram)
+		if x == nil {
+			return protoiface.SizeOutput{
+				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+				Size:              0,
+			}
+		}
+		options := runtime.SizeInputToOptions(input)
+		_ = options
+		var n int
+		var l int
+		_ = l
+		l = len(x.GameIndex)
+		if l > 0 {
+			n += 1 + l + runtime.Sov(uint64(l))
+		}
+		if x.unknownFields != nil {
+			n += len(x.unknownFields)
+		}
+		return protoiface.SizeOutput{
+			NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+			Size:              n,
+		}
+	}
+
+	marshal := func(input protoiface.MarshalInput) (protoiface.MarshalOutput, error) {
+		x := input.Message.Interface().(*ResCheckersTorram)
+		if x == nil {
+			return protoiface.MarshalOutput{
+				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+				Buf:               input.Buf,
+			}, nil
+		}
+		options := runtime.MarshalInputToOptions(input)
+		_ = options
+		size := options.Size(x)
+		dAtA := make([]byte, size)
+		i := len(dAtA)
+		_ = i
+		var l int
+		_ = l
+		if x.unknownFields != nil {
+			i -= len(x.unknownFields)
+			copy(dAtA[i:], x.unknownFields)
+		}
+		if len(x.GameIndex) > 0 {
+			i -= len(x.GameIndex)
+			copy(dAtA[i:], x.GameIndex)
+			i = runtime.EncodeVarint(dAtA, i, uint64(len(x.GameIndex)))
+			i--
+			dAtA[i] = 0xa
+		}
+		if input.Buf != nil {
+			input.Buf = append(input.Buf, dAtA...)
+		} else {
+			input.Buf = dAtA
+		}
+		return protoiface.MarshalOutput{
+			NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+			Buf:               input.Buf,
+		}, nil
+	}
+	unmarshal := func(input protoiface.UnmarshalInput) (protoiface.UnmarshalOutput, error) {
+		x := input.Message.Interface().(*ResCheckersTorram)
+		if x == nil {
+			return protoiface.UnmarshalOutput{
+				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
+				Flags:             input.Flags,
+			}, nil
+		}
+		options := runtime.UnmarshalInputToOptions(input)
+		_ = options
+		dAtA := input.Buf
+		l := len(dAtA)
+		iNdEx := 0
+		for iNdEx < l {
+			preIndex := iNdEx
+			var wire uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
+				}
+				if iNdEx >= l {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				wire |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			fieldNum := int32(wire >> 3)
+			wireType := int(wire & 0x7)
+			if wireType == 4 {
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: ResCheckersTorram: wiretype end group for non-group")
+			}
+			if fieldNum <= 0 {
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: ResCheckersTorram: illegal tag %d (wire type %d)", fieldNum, wire)
+			}
+			switch fieldNum {
+			case 1:
+				if wireType != 2 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: wrong wireType = %d for field GameIndex", wireType)
+				}
+				var stringLen uint64
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
+					}
+					if iNdEx >= l {
+						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+					}
+					b := dAtA[iNdEx]
+					iNdEx++
+					stringLen |= uint64(b&0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				intStringLen := int(stringLen)
+				if intStringLen < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				postIndex := iNdEx + intStringLen
+				if postIndex < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				if postIndex > l {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+				}
+				x.GameIndex = string(dAtA[iNdEx:postIndex])
+				iNdEx = postIndex
+			default:
+				iNdEx = preIndex
+				skippy, err := runtime.Skip(dAtA[iNdEx:])
+				if err != nil {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, err
+				}
+				if (skippy < 0) || (iNdEx+skippy) < 0 {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
+				}
+				if (iNdEx + skippy) > l {
+					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+				}
+				if !options.DiscardUnknown {
+					x.unknownFields = append(x.unknownFields, dAtA[iNdEx:iNdEx+skippy]...)
+				}
+				iNdEx += skippy
+			}
+		}
+
+		if iNdEx > l {
+			return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
+		}
+		return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, nil
+	}
+	return &protoiface.Methods{
+		NoUnkeyedLiterals: struct{}{},
+		Flags:             protoiface.SupportMarshalDeterministic | protoiface.SupportUnmarshalDiscardUnknown,
+		Size:              size,
+		Marshal:           marshal,
+		Unmarshal:         unmarshal,
+		Merge:             nil,
+		CheckInitialized:  nil,
+	}
+}
+
 // Code generated by protoc-gen-go. DO NOT EDIT.
 // versions:
 // 	protoc-gen-go v1.27.0
@@ -960,6 +1928,94 @@ func (*MsgUpdateParamsResponse) Descriptor() ([]byte, []int) {
 	return file_checkerstorram_checkerstorram_tx_proto_rawDescGZIP(), []int{1}
 }
 
+// ReqCheckersTorram is the request for creating a new game
+type ReqCheckersTorram struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Creator string `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
+	Black   string `protobuf:"bytes,2,opt,name=black,proto3" json:"black,omitempty"`
+	Red     string `protobuf:"bytes,3,opt,name=red,proto3" json:"red,omitempty"`
+}
+
+func (x *ReqCheckersTorram) Reset() {
+	*x = ReqCheckersTorram{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_checkerstorram_checkerstorram_tx_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqCheckersTorram) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqCheckersTorram) ProtoMessage() {}
+
+// Deprecated: Use ReqCheckersTorram.ProtoReflect.Descriptor instead.
+func (*ReqCheckersTorram) Descriptor() ([]byte, []int) {
+	return file_checkerstorram_checkerstorram_tx_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *ReqCheckersTorram) GetCreator() string {
+	if x != nil {
+		return x.Creator
+	}
+	return ""
+}
+
+func (x *ReqCheckersTorram) GetBlack() string {
+	if x != nil {
+		return x.Black
+	}
+	return ""
+}
+
+func (x *ReqCheckersTorram) GetRed() string {
+	if x != nil {
+		return x.Red
+	}
+	return ""
+}
+
+// ResCheckersTorram is returned after creating a new game
+type ResCheckersTorram struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	GameIndex string `protobuf:"bytes,1,opt,name=game_index,json=gameIndex,proto3" json:"game_index,omitempty"`
+}
+
+func (x *ResCheckersTorram) Reset() {
+	*x = ResCheckersTorram{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_checkerstorram_checkerstorram_tx_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResCheckersTorram) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResCheckersTorram) ProtoMessage() {}
+
+// Deprecated: Use ResCheckersTorram.ProtoReflect.Descriptor instead.
+func (*ResCheckersTorram) Descriptor() ([]byte, []int) {
+	return file_checkerstorram_checkerstorram_tx_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *ResCheckersTorram) GetGameIndex() string {
+	if x != nil {
+		return x.GameIndex
+	}
+	return ""
+}
+
 var File_checkerstorram_checkerstorram_tx_proto protoreflect.FileDescriptor
 
 var file_checkerstorram_checkerstorram_tx_proto_rawDesc = []byte{
@@ -991,31 +2047,52 @@ var file_checkerstorram_checkerstorram_tx_proto_rawDesc = []byte{
 	0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x4d, 0x73, 0x67, 0x55, 0x70,
 	0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x22, 0x19, 0x0a, 0x17, 0x4d, 0x73,
 	0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x32, 0x84, 0x01, 0x0a, 0x03, 0x4d, 0x73, 0x67, 0x12, 0x76, 0x0a,
-	0x0c, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0x2e, 0x2e,
-	0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63,
-	0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x4d, 0x73,
-	0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x1a, 0x36, 0x2e,
-	0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63,
-	0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x4d, 0x73,
-	0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x1a, 0x05, 0x80, 0xe7, 0xb0, 0x2a, 0x01, 0x42, 0xf4, 0x01, 0x0a,
-	0x21, 0x63, 0x6f, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x97, 0x01, 0x0a, 0x11, 0x52, 0x65, 0x71, 0x43, 0x68, 0x65,
+	0x63, 0x6b, 0x65, 0x72, 0x73, 0x54, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x12, 0x18, 0x0a, 0x07, 0x63,
+	0x72, 0x65, 0x61, 0x74, 0x6f, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x63, 0x72,
+	0x65, 0x61, 0x74, 0x6f, 0x72, 0x12, 0x2e, 0x0a, 0x05, 0x62, 0x6c, 0x61, 0x63, 0x6b, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x42, 0x18, 0xd2, 0xb4, 0x2d, 0x14, 0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73,
+	0x2e, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x52, 0x05,
+	0x62, 0x6c, 0x61, 0x63, 0x6b, 0x12, 0x2a, 0x0a, 0x03, 0x72, 0x65, 0x64, 0x18, 0x03, 0x20, 0x01,
+	0x28, 0x09, 0x42, 0x18, 0xd2, 0xb4, 0x2d, 0x14, 0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73, 0x2e, 0x41,
+	0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x52, 0x03, 0x72, 0x65,
+	0x64, 0x3a, 0x0c, 0x82, 0xe7, 0xb0, 0x2a, 0x07, 0x63, 0x72, 0x65, 0x61, 0x74, 0x6f, 0x72, 0x22,
+	0x32, 0x0a, 0x11, 0x52, 0x65, 0x73, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x54, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x12, 0x1d, 0x0a, 0x0a, 0x67, 0x61, 0x6d, 0x65, 0x5f, 0x69, 0x6e, 0x64,
+	0x65, 0x78, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x67, 0x61, 0x6d, 0x65, 0x49, 0x6e,
+	0x64, 0x65, 0x78, 0x32, 0x87, 0x02, 0x0a, 0x0e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73,
+	0x54, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x12, 0x76, 0x0a, 0x0c, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65,
+	0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0x2e, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
+	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73,
+	0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x4d, 0x73, 0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65,
+	0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x1a, 0x36, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
+	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73,
+	0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x4d, 0x73, 0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65,
+	0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x76,
+	0x0a, 0x10, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
+	0x47, 0x6d, 0x12, 0x30, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72,
 	0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72,
-	0x61, 0x6d, 0x42, 0x07, 0x54, 0x78, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x31, 0x63,
-	0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x2d, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x61,
-	0x70, 0x69, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61,
-	0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d,
-	0xa2, 0x02, 0x03, 0x43, 0x43, 0x58, 0xaa, 0x02, 0x1d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
-	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73,
-	0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0xca, 0x02, 0x1d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
-	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x5c, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73,
-	0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0xe2, 0x02, 0x29, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
-	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x5c, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73,
-	0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61,
-	0x74, 0x61, 0xea, 0x02, 0x1e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72,
-	0x72, 0x61, 0x6d, 0x3a, 0x3a, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72,
-	0x72, 0x61, 0x6d, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x61, 0x6d, 0x2e, 0x52, 0x65, 0x71, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x54, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x1a, 0x30, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74,
+	0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x2e, 0x52, 0x65, 0x73, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73,
+	0x54, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x1a, 0x05, 0x80, 0xe7, 0xb0, 0x2a, 0x01, 0x42, 0xf4, 0x01,
+	0x0a, 0x21, 0x63, 0x6f, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72,
+	0x72, 0x61, 0x6d, 0x42, 0x07, 0x54, 0x78, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x31,
+	0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x2d, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f,
+	0x61, 0x70, 0x69, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72,
+	0x61, 0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61,
+	0x6d, 0xa2, 0x02, 0x03, 0x43, 0x43, 0x58, 0xaa, 0x02, 0x1d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65,
+	0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
+	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0xca, 0x02, 0x1d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65,
+	0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x5c, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
+	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0xe2, 0x02, 0x29, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65,
+	0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x5c, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
+	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64,
+	0x61, 0x74, 0x61, 0xea, 0x02, 0x1e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x3a, 0x3a, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1030,18 +2107,22 @@ func file_checkerstorram_checkerstorram_tx_proto_rawDescGZIP() []byte {
 	return file_checkerstorram_checkerstorram_tx_proto_rawDescData
 }
 
-var file_checkerstorram_checkerstorram_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_checkerstorram_checkerstorram_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_checkerstorram_checkerstorram_tx_proto_goTypes = []interface{}{
 	(*MsgUpdateParams)(nil),         // 0: checkerstorram.checkerstorram.MsgUpdateParams
 	(*MsgUpdateParamsResponse)(nil), // 1: checkerstorram.checkerstorram.MsgUpdateParamsResponse
-	(*Params)(nil),                  // 2: checkerstorram.checkerstorram.Params
+	(*ReqCheckersTorram)(nil),       // 2: checkerstorram.checkerstorram.ReqCheckersTorram
+	(*ResCheckersTorram)(nil),       // 3: checkerstorram.checkerstorram.ResCheckersTorram
+	(*Params)(nil),                  // 4: checkerstorram.checkerstorram.Params
 }
 var file_checkerstorram_checkerstorram_tx_proto_depIdxs = []int32{
-	2, // 0: checkerstorram.checkerstorram.MsgUpdateParams.params:type_name -> checkerstorram.checkerstorram.Params
-	0, // 1: checkerstorram.checkerstorram.Msg.UpdateParams:input_type -> checkerstorram.checkerstorram.MsgUpdateParams
-	1, // 2: checkerstorram.checkerstorram.Msg.UpdateParams:output_type -> checkerstorram.checkerstorram.MsgUpdateParamsResponse
-	2, // [2:3] is the sub-list for method output_type
-	1, // [1:2] is the sub-list for method input_type
+	4, // 0: checkerstorram.checkerstorram.MsgUpdateParams.params:type_name -> checkerstorram.checkerstorram.Params
+	0, // 1: checkerstorram.checkerstorram.CheckersTorram.UpdateParams:input_type -> checkerstorram.checkerstorram.MsgUpdateParams
+	2, // 2: checkerstorram.checkerstorram.CheckersTorram.CheckersCreateGm:input_type -> checkerstorram.checkerstorram.ReqCheckersTorram
+	1, // 3: checkerstorram.checkerstorram.CheckersTorram.UpdateParams:output_type -> checkerstorram.checkerstorram.MsgUpdateParamsResponse
+	3, // 4: checkerstorram.checkerstorram.CheckersTorram.CheckersCreateGm:output_type -> checkerstorram.checkerstorram.ResCheckersTorram
+	3, // [3:5] is the sub-list for method output_type
+	1, // [1:3] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
 	1, // [1:1] is the sub-list for extension extendee
 	0, // [0:1] is the sub-list for field type_name
@@ -1078,6 +2159,30 @@ func file_checkerstorram_checkerstorram_tx_proto_init() {
 				return nil
 			}
 		}
+		file_checkerstorram_checkerstorram_tx_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqCheckersTorram); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_checkerstorram_checkerstorram_tx_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResCheckersTorram); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -1085,7 +2190,7 @@ func file_checkerstorram_checkerstorram_tx_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_checkerstorram_checkerstorram_tx_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
