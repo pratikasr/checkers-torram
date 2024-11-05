@@ -18,11 +18,14 @@ func (am AppModule) AutoCLIOptions() *autocliv1.ModuleOptions {
 					Short:     "Shows the parameters of the module",
 				},
 				{
-					RpcMethod: "GetGame",
-					Use:       "get-game [id]",
-					Short:     "Get stored game by id",
+					RpcMethod: "GetStoredGame",
+					Use:       "get-game [index]",
+					Short:     "Query a game by index",
+					Long:      "Get the stored game information for a specific game index",
 					PositionalArgs: []*autocliv1.PositionalArgDescriptor{
-						{ProtoField: "index"},
+						{
+							ProtoField: "index",
+						},
 					},
 				},
 				// this line is used by ignite scaffolding # autocli/query
