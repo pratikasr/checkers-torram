@@ -1,36 +1,36 @@
-// x/checkerstorram/keeper/query.go
 package keeper
 
 import (
-	"checkers-torram/x/checkerstorram/types"
 	"context"
+
+	"checkers-torram/x/checkerstorram/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
-type queryServer struct {
-	Keeper
+var _ types.QueryServer = Keeper{}
+
+func (k Keeper) Params(ctx context.Context, req *types.QueryParamsRequest) (*types.QueryParamsResponse, error) {
+	if req == nil {
+		return nil, status.Error(codes.InvalidArgument, "invalid request")
+	}
+	context := sdk.UnwrapSDKContext(ctx)
+	params := k.GetParams(context)
+
+	return &types.QueryParamsResponse{Params: params}, nil
 }
 
-// NewQueryServerImpl returns an implementation of the QueryServer interface
-func NewQueryServerImpl(k Keeper) types.QueryServer {
-	return &queryServer{Keeper: k}
-}
-
-// GetStoredGame implements types.QueryServer
-func (q queryServer) GetStoredGame(goCtx context.Context, req *types.QueryGetStoredGameRequest) (*types.QueryGetStoredGameResponse, error) {
+func (k Keeper) GetGame(ctx context.Context, req *types.QueryGetGameRequest) (*types.QueryGetGameResponse, error) {
 	if req == nil {
 		return nil, status.Error(codes.InvalidArgument, "invalid request")
 	}
 
-	ctx := sdk.UnwrapSDKContext(goCtx)
-	game, found := q.Keeper.GetStoredGame(ctx, req.Index)
+	context := sdk.UnwrapSDKContext(ctx)
+	game, found := k.GetStoredGame(context, req.Index)
 	if !found {
 		return nil, status.Error(codes.NotFound, "game not found")
 	}
 
-	return &types.QueryGetStoredGameResponse{
-		StoredGame: game,
-	}, nil
+	return &types.QueryGetGameResponse{StoredGame: game}, nil
 }

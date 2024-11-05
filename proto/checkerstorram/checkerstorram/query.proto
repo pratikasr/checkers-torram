@@ -1,7 +1,6 @@
 syntax = "proto3";
 package checkerstorram.checkerstorram;
 
-import "amino/amino.proto";
 import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
@@ -16,9 +15,10 @@ service Query {
   rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
     option (google.api.http).get = "/checkers-torram/checkerstorram/params";
   }
-  // GetStoredGame returns the stored game at the specified index
-  rpc GetStoredGame(QueryGetStoredGameRequest) returns (QueryGetStoredGameResponse) {
-    option (google.api.http).get = "/checkers-torram/checkerstorram/stored_game/{index}";
+
+  // GetGame queries a stored game by index
+  rpc GetGame(QueryGetGameRequest) returns (QueryGetGameResponse) {
+    option (google.api.http).get = "/checkers-torram/checkerstorram/games/{index}";
   }
 }
 
@@ -28,18 +28,15 @@ message QueryParamsRequest {}
 // QueryParamsResponse is response type for the Query/Params RPC method.
 message QueryParamsResponse {
   // params holds all the parameters of this module.
-  Params params = 1 [
-    (gogoproto.nullable) = false,
-    (amino.dont_omitempty) = true
-  ];
+  Params params = 1 [(gogoproto.nullable) = false];
 }
 
-// QueryGetStoredGameRequest is the request type for querying a stored game
-message QueryGetStoredGameRequest {
+// QueryGetGameRequest is request type for the Query/GetGame method
+message QueryGetGameRequest {
   string index = 1;
 }
 
-// QueryGetStoredGameResponse is the response type for querying a stored game
-message QueryGetStoredGameResponse {
-  StoredGame stored_game = 1 [(gogoproto.nullable) = false];
+// QueryGetGameResponse is response type for the Query/GetGame method
+message QueryGetGameResponse {
+  StoredGame storedGame = 1 [(gogoproto.nullable) = false];
 }

@@ -18,10 +18,9 @@ func (am AppModule) AutoCLIOptions() *autocliv1.ModuleOptions {
 					Short:     "Shows the parameters of the module",
 				},
 				{
-					RpcMethod: "GetStoredGame",
+					RpcMethod: "GetGame",
 					Use:       "get-game [index]",
-					Short:     "Query a game by index",
-					Long:      "Get the stored game information for a specific game index",
+					Short:     "Get stored game by index",
 					PositionalArgs: []*autocliv1.PositionalArgDescriptor{
 						{
 							ProtoField: "index",

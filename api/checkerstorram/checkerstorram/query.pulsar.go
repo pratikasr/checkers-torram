@@ -2,7 +2,6 @@
 package checkerstorram
 
 import (
-	_ "cosmossdk.io/api/amino"
 	_ "cosmossdk.io/api/cosmos/base/query/v1beta1"
 	fmt "fmt"
 	runtime "github.com/cosmos/cosmos-proto/runtime"
@@ -808,25 +807,25 @@ func (x *fastReflection_QueryParamsResponse) ProtoMethods() *protoiface.Methods 
 }
 
 var (
-	md_QueryGetStoredGameRequest       protoreflect.MessageDescriptor
-	fd_QueryGetStoredGameRequest_index protoreflect.FieldDescriptor
+	md_QueryGetGameRequest       protoreflect.MessageDescriptor
+	fd_QueryGetGameRequest_index protoreflect.FieldDescriptor
 )
 
 func init() {
 	file_checkerstorram_checkerstorram_query_proto_init()
-	md_QueryGetStoredGameRequest = File_checkerstorram_checkerstorram_query_proto.Messages().ByName("QueryGetStoredGameRequest")
-	fd_QueryGetStoredGameRequest_index = md_QueryGetStoredGameRequest.Fields().ByName("index")
+	md_QueryGetGameRequest = File_checkerstorram_checkerstorram_query_proto.Messages().ByName("QueryGetGameRequest")
+	fd_QueryGetGameRequest_index = md_QueryGetGameRequest.Fields().ByName("index")
 }
 
-var _ protoreflect.Message = (*fastReflection_QueryGetStoredGameRequest)(nil)
+var _ protoreflect.Message = (*fastReflection_QueryGetGameRequest)(nil)
 
-type fastReflection_QueryGetStoredGameRequest QueryGetStoredGameRequest
+type fastReflection_QueryGetGameRequest QueryGetGameRequest
 
-func (x *QueryGetStoredGameRequest) ProtoReflect() protoreflect.Message {
-	return (*fastReflection_QueryGetStoredGameRequest)(x)
+func (x *QueryGetGameRequest) ProtoReflect() protoreflect.Message {
+	return (*fastReflection_QueryGetGameRequest)(x)
 }
 
-func (x *QueryGetStoredGameRequest) slowProtoReflect() protoreflect.Message {
+func (x *QueryGetGameRequest) slowProtoReflect() protoreflect.Message {
 	mi := &file_checkerstorram_checkerstorram_query_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -838,43 +837,43 @@ func (x *QueryGetStoredGameRequest) slowProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-var _fastReflection_QueryGetStoredGameRequest_messageType fastReflection_QueryGetStoredGameRequest_messageType
-var _ protoreflect.MessageType = fastReflection_QueryGetStoredGameRequest_messageType{}
+var _fastReflection_QueryGetGameRequest_messageType fastReflection_QueryGetGameRequest_messageType
+var _ protoreflect.MessageType = fastReflection_QueryGetGameRequest_messageType{}
 
-type fastReflection_QueryGetStoredGameRequest_messageType struct{}
+type fastReflection_QueryGetGameRequest_messageType struct{}
 
-func (x fastReflection_QueryGetStoredGameRequest_messageType) Zero() protoreflect.Message {
-	return (*fastReflection_QueryGetStoredGameRequest)(nil)
+func (x fastReflection_QueryGetGameRequest_messageType) Zero() protoreflect.Message {
+	return (*fastReflection_QueryGetGameRequest)(nil)
 }
-func (x fastReflection_QueryGetStoredGameRequest_messageType) New() protoreflect.Message {
-	return new(fastReflection_QueryGetStoredGameRequest)
+func (x fastReflection_QueryGetGameRequest_messageType) New() protoreflect.Message {
+	return new(fastReflection_QueryGetGameRequest)
 }
-func (x fastReflection_QueryGetStoredGameRequest_messageType) Descriptor() protoreflect.MessageDescriptor {
-	return md_QueryGetStoredGameRequest
+func (x fastReflection_QueryGetGameRequest_messageType) Descriptor() protoreflect.MessageDescriptor {
+	return md_QueryGetGameRequest
 }
 
 // Descriptor returns message descriptor, which contains only the protobuf
 // type information for the message.
-func (x *fastReflection_QueryGetStoredGameRequest) Descriptor() protoreflect.MessageDescriptor {
-	return md_QueryGetStoredGameRequest
+func (x *fastReflection_QueryGetGameRequest) Descriptor() protoreflect.MessageDescriptor {
+	return md_QueryGetGameRequest
 }
 
 // Type returns the message type, which encapsulates both Go and protobuf
 // type information. If the Go type information is not needed,
 // it is recommended that the message descriptor be used instead.
-func (x *fastReflection_QueryGetStoredGameRequest) Type() protoreflect.MessageType {
-	return _fastReflection_QueryGetStoredGameRequest_messageType
+func (x *fastReflection_QueryGetGameRequest) Type() protoreflect.MessageType {
+	return _fastReflection_QueryGetGameRequest_messageType
 }
 
 // New returns a newly allocated and mutable empty message.
-func (x *fastReflection_QueryGetStoredGameRequest) New() protoreflect.Message {
-	return new(fastReflection_QueryGetStoredGameRequest)
+func (x *fastReflection_QueryGetGameRequest) New() protoreflect.Message {
+	return new(fastReflection_QueryGetGameRequest)
 }
 
 // Interface unwraps the message reflection interface and
 // returns the underlying ProtoMessage interface.
-func (x *fastReflection_QueryGetStoredGameRequest) Interface() protoreflect.ProtoMessage {
-	return (*QueryGetStoredGameRequest)(x)
+func (x *fastReflection_QueryGetGameRequest) Interface() protoreflect.ProtoMessage {
+	return (*QueryGetGameRequest)(x)
 }
 
 // Range iterates over every populated field in an undefined order,
@@ -882,10 +881,10 @@ func (x *fastReflection_QueryGetStoredGameRequest) Interface() protoreflect.Prot
 // Range returns immediately if f returns false.
 // While iterating, mutating operations may only be performed
 // on the current field descriptor.
-func (x *fastReflection_QueryGetStoredGameRequest) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
+func (x *fastReflection_QueryGetGameRequest) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
 	if x.Index != "" {
 		value := protoreflect.ValueOfString(x.Index)
-		if !f(fd_QueryGetStoredGameRequest_index, value) {
+		if !f(fd_QueryGetGameRequest_index, value) {
 			return
 		}
 	}
@@ -902,15 +901,15 @@ func (x *fastReflection_QueryGetStoredGameRequest) Range(f func(protoreflect.Fie
 // In other cases (aside from the nullable cases above),
 // a proto3 scalar field is populated if it contains a non-zero value, and
 // a repeated field is populated if it is non-empty.
-func (x *fastReflection_QueryGetStoredGameRequest) Has(fd protoreflect.FieldDescriptor) bool {
+func (x *fastReflection_QueryGetGameRequest) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameRequest.index":
+	case "checkerstorram.checkerstorram.QueryGetGameRequest.index":
 		return x.Index != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameRequest"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -920,15 +919,15 @@ func (x *fastReflection_QueryGetStoredGameRequest) Has(fd protoreflect.FieldDesc
 // associated with the given field number.
 //
 // Clear is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_QueryGetStoredGameRequest) Clear(fd protoreflect.FieldDescriptor) {
+func (x *fastReflection_QueryGetGameRequest) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameRequest.index":
+	case "checkerstorram.checkerstorram.QueryGetGameRequest.index":
 		x.Index = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameRequest"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -938,16 +937,16 @@ func (x *fastReflection_QueryGetStoredGameRequest) Clear(fd protoreflect.FieldDe
 // the default value of a bytes scalar is guaranteed to be a copy.
 // For unpopulated composite types, it returns an empty, read-only view
 // of the value; to obtain a mutable reference, use Mutable.
-func (x *fastReflection_QueryGetStoredGameRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_QueryGetGameRequest) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameRequest.index":
+	case "checkerstorram.checkerstorram.QueryGetGameRequest.index":
 		value := x.Index
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameRequest"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameRequest does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameRequest does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -961,15 +960,15 @@ func (x *fastReflection_QueryGetStoredGameRequest) Get(descriptor protoreflect.F
 // empty, read-only value, then it panics.
 //
 // Set is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_QueryGetStoredGameRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
+func (x *fastReflection_QueryGetGameRequest) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameRequest.index":
+	case "checkerstorram.checkerstorram.QueryGetGameRequest.index":
 		x.Index = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameRequest"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameRequest does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -983,40 +982,40 @@ func (x *fastReflection_QueryGetStoredGameRequest) Set(fd protoreflect.FieldDesc
 // It panics if the field does not contain a composite type.
 //
 // Mutable is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_QueryGetStoredGameRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_QueryGetGameRequest) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameRequest.index":
-		panic(fmt.Errorf("field index of message checkerstorram.checkerstorram.QueryGetStoredGameRequest is not mutable"))
+	case "checkerstorram.checkerstorram.QueryGetGameRequest.index":
+		panic(fmt.Errorf("field index of message checkerstorram.checkerstorram.QueryGetGameRequest is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameRequest"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameRequest does not contain field %s", fd.FullName()))
 	}
 }
 
 // NewField returns a new value that is assignable to the field
 // for the given descriptor. For scalars, this returns the default value.
 // For lists, maps, and messages, this returns a new, empty, mutable value.
-func (x *fastReflection_QueryGetStoredGameRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_QueryGetGameRequest) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameRequest.index":
+	case "checkerstorram.checkerstorram.QueryGetGameRequest.index":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameRequest"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameRequest"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameRequest does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameRequest does not contain field %s", fd.FullName()))
 	}
 }
 
 // WhichOneof reports which field within the oneof is populated,
 // returning nil if none are populated.
 // It panics if the oneof descriptor does not belong to this message.
-func (x *fastReflection_QueryGetStoredGameRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
+func (x *fastReflection_QueryGetGameRequest) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in checkerstorram.checkerstorram.QueryGetStoredGameRequest", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in checkerstorram.checkerstorram.QueryGetGameRequest", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1024,7 +1023,7 @@ func (x *fastReflection_QueryGetStoredGameRequest) WhichOneof(d protoreflect.One
 // GetUnknown retrieves the entire list of unknown fields.
 // The caller may only mutate the contents of the RawFields
 // if the mutated bytes are stored back into the message with SetUnknown.
-func (x *fastReflection_QueryGetStoredGameRequest) GetUnknown() protoreflect.RawFields {
+func (x *fastReflection_QueryGetGameRequest) GetUnknown() protoreflect.RawFields {
 	return x.unknownFields
 }
 
@@ -1035,7 +1034,7 @@ func (x *fastReflection_QueryGetStoredGameRequest) GetUnknown() protoreflect.Raw
 // An empty RawFields may be passed to clear the fields.
 //
 // SetUnknown is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_QueryGetStoredGameRequest) SetUnknown(fields protoreflect.RawFields) {
+func (x *fastReflection_QueryGetGameRequest) SetUnknown(fields protoreflect.RawFields) {
 	x.unknownFields = fields
 }
 
@@ -1047,7 +1046,7 @@ func (x *fastReflection_QueryGetStoredGameRequest) SetUnknown(fields protoreflec
 // message type, but the details are implementation dependent.
 // Validity is not part of the protobuf data model, and may not
 // be preserved in marshaling or other operations.
-func (x *fastReflection_QueryGetStoredGameRequest) IsValid() bool {
+func (x *fastReflection_QueryGetGameRequest) IsValid() bool {
 	return x != nil
 }
 
@@ -1057,9 +1056,9 @@ func (x *fastReflection_QueryGetStoredGameRequest) IsValid() bool {
 // The returned methods type is identical to
 // "google.golang.org/protobuf/runtime/protoiface".Methods.
 // Consult the protoiface package documentation for details.
-func (x *fastReflection_QueryGetStoredGameRequest) ProtoMethods() *protoiface.Methods {
+func (x *fastReflection_QueryGetGameRequest) ProtoMethods() *protoiface.Methods {
 	size := func(input protoiface.SizeInput) protoiface.SizeOutput {
-		x := input.Message.Interface().(*QueryGetStoredGameRequest)
+		x := input.Message.Interface().(*QueryGetGameRequest)
 		if x == nil {
 			return protoiface.SizeOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -1085,7 +1084,7 @@ func (x *fastReflection_QueryGetStoredGameRequest) ProtoMethods() *protoiface.Me
 	}
 
 	marshal := func(input protoiface.MarshalInput) (protoiface.MarshalOutput, error) {
-		x := input.Message.Interface().(*QueryGetStoredGameRequest)
+		x := input.Message.Interface().(*QueryGetGameRequest)
 		if x == nil {
 			return protoiface.MarshalOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -1122,7 +1121,7 @@ func (x *fastReflection_QueryGetStoredGameRequest) ProtoMethods() *protoiface.Me
 		}, nil
 	}
 	unmarshal := func(input protoiface.UnmarshalInput) (protoiface.UnmarshalOutput, error) {
-		x := input.Message.Interface().(*QueryGetStoredGameRequest)
+		x := input.Message.Interface().(*QueryGetGameRequest)
 		if x == nil {
 			return protoiface.UnmarshalOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -1154,10 +1153,10 @@ func (x *fastReflection_QueryGetStoredGameRequest) ProtoMethods() *protoiface.Me
 			fieldNum := int32(wire >> 3)
 			wireType := int(wire & 0x7)
 			if wireType == 4 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: QueryGetStoredGameRequest: wiretype end group for non-group")
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: QueryGetGameRequest: wiretype end group for non-group")
 			}
 			if fieldNum <= 0 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: QueryGetStoredGameRequest: illegal tag %d (wire type %d)", fieldNum, wire)
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: QueryGetGameRequest: illegal tag %d (wire type %d)", fieldNum, wire)
 			}
 			switch fieldNum {
 			case 1:
@@ -1228,25 +1227,25 @@ func (x *fastReflection_QueryGetStoredGameRequest) ProtoMethods() *protoiface.Me
 }
 
 var (
-	md_QueryGetStoredGameResponse             protoreflect.MessageDescriptor
-	fd_QueryGetStoredGameResponse_stored_game protoreflect.FieldDescriptor
+	md_QueryGetGameResponse            protoreflect.MessageDescriptor
+	fd_QueryGetGameResponse_storedGame protoreflect.FieldDescriptor
 )
 
 func init() {
 	file_checkerstorram_checkerstorram_query_proto_init()
-	md_QueryGetStoredGameResponse = File_checkerstorram_checkerstorram_query_proto.Messages().ByName("QueryGetStoredGameResponse")
-	fd_QueryGetStoredGameResponse_stored_game = md_QueryGetStoredGameResponse.Fields().ByName("stored_game")
+	md_QueryGetGameResponse = File_checkerstorram_checkerstorram_query_proto.Messages().ByName("QueryGetGameResponse")
+	fd_QueryGetGameResponse_storedGame = md_QueryGetGameResponse.Fields().ByName("storedGame")
 }
 
-var _ protoreflect.Message = (*fastReflection_QueryGetStoredGameResponse)(nil)
+var _ protoreflect.Message = (*fastReflection_QueryGetGameResponse)(nil)
 
-type fastReflection_QueryGetStoredGameResponse QueryGetStoredGameResponse
+type fastReflection_QueryGetGameResponse QueryGetGameResponse
 
-func (x *QueryGetStoredGameResponse) ProtoReflect() protoreflect.Message {
-	return (*fastReflection_QueryGetStoredGameResponse)(x)
+func (x *QueryGetGameResponse) ProtoReflect() protoreflect.Message {
+	return (*fastReflection_QueryGetGameResponse)(x)
 }
 
-func (x *QueryGetStoredGameResponse) slowProtoReflect() protoreflect.Message {
+func (x *QueryGetGameResponse) slowProtoReflect() protoreflect.Message {
 	mi := &file_checkerstorram_checkerstorram_query_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1258,43 +1257,43 @@ func (x *QueryGetStoredGameResponse) slowProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-var _fastReflection_QueryGetStoredGameResponse_messageType fastReflection_QueryGetStoredGameResponse_messageType
-var _ protoreflect.MessageType = fastReflection_QueryGetStoredGameResponse_messageType{}
+var _fastReflection_QueryGetGameResponse_messageType fastReflection_QueryGetGameResponse_messageType
+var _ protoreflect.MessageType = fastReflection_QueryGetGameResponse_messageType{}
 
-type fastReflection_QueryGetStoredGameResponse_messageType struct{}
+type fastReflection_QueryGetGameResponse_messageType struct{}
 
-func (x fastReflection_QueryGetStoredGameResponse_messageType) Zero() protoreflect.Message {
-	return (*fastReflection_QueryGetStoredGameResponse)(nil)
+func (x fastReflection_QueryGetGameResponse_messageType) Zero() protoreflect.Message {
+	return (*fastReflection_QueryGetGameResponse)(nil)
 }
-func (x fastReflection_QueryGetStoredGameResponse_messageType) New() protoreflect.Message {
-	return new(fastReflection_QueryGetStoredGameResponse)
+func (x fastReflection_QueryGetGameResponse_messageType) New() protoreflect.Message {
+	return new(fastReflection_QueryGetGameResponse)
 }
-func (x fastReflection_QueryGetStoredGameResponse_messageType) Descriptor() protoreflect.MessageDescriptor {
-	return md_QueryGetStoredGameResponse
+func (x fastReflection_QueryGetGameResponse_messageType) Descriptor() protoreflect.MessageDescriptor {
+	return md_QueryGetGameResponse
 }
 
 // Descriptor returns message descriptor, which contains only the protobuf
 // type information for the message.
-func (x *fastReflection_QueryGetStoredGameResponse) Descriptor() protoreflect.MessageDescriptor {
-	return md_QueryGetStoredGameResponse
+func (x *fastReflection_QueryGetGameResponse) Descriptor() protoreflect.MessageDescriptor {
+	return md_QueryGetGameResponse
 }
 
 // Type returns the message type, which encapsulates both Go and protobuf
 // type information. If the Go type information is not needed,
 // it is recommended that the message descriptor be used instead.
-func (x *fastReflection_QueryGetStoredGameResponse) Type() protoreflect.MessageType {
-	return _fastReflection_QueryGetStoredGameResponse_messageType
+func (x *fastReflection_QueryGetGameResponse) Type() protoreflect.MessageType {
+	return _fastReflection_QueryGetGameResponse_messageType
 }
 
 // New returns a newly allocated and mutable empty message.
-func (x *fastReflection_QueryGetStoredGameResponse) New() protoreflect.Message {
-	return new(fastReflection_QueryGetStoredGameResponse)
+func (x *fastReflection_QueryGetGameResponse) New() protoreflect.Message {
+	return new(fastReflection_QueryGetGameResponse)
 }
 
 // Interface unwraps the message reflection interface and
 // returns the underlying ProtoMessage interface.
-func (x *fastReflection_QueryGetStoredGameResponse) Interface() protoreflect.ProtoMessage {
-	return (*QueryGetStoredGameResponse)(x)
+func (x *fastReflection_QueryGetGameResponse) Interface() protoreflect.ProtoMessage {
+	return (*QueryGetGameResponse)(x)
 }
 
 // Range iterates over every populated field in an undefined order,
@@ -1302,10 +1301,10 @@ func (x *fastReflection_QueryGetStoredGameResponse) Interface() protoreflect.Pro
 // Range returns immediately if f returns false.
 // While iterating, mutating operations may only be performed
 // on the current field descriptor.
-func (x *fastReflection_QueryGetStoredGameResponse) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
+func (x *fastReflection_QueryGetGameResponse) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
 	if x.StoredGame != nil {
 		value := protoreflect.ValueOfMessage(x.StoredGame.ProtoReflect())
-		if !f(fd_QueryGetStoredGameResponse_stored_game, value) {
+		if !f(fd_QueryGetGameResponse_storedGame, value) {
 			return
 		}
 	}
@@ -1322,15 +1321,15 @@ func (x *fastReflection_QueryGetStoredGameResponse) Range(f func(protoreflect.Fi
 // In other cases (aside from the nullable cases above),
 // a proto3 scalar field is populated if it contains a non-zero value, and
 // a repeated field is populated if it is non-empty.
-func (x *fastReflection_QueryGetStoredGameResponse) Has(fd protoreflect.FieldDescriptor) bool {
+func (x *fastReflection_QueryGetGameResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameResponse.stored_game":
+	case "checkerstorram.checkerstorram.QueryGetGameResponse.storedGame":
 		return x.StoredGame != nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameResponse"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1340,15 +1339,15 @@ func (x *fastReflection_QueryGetStoredGameResponse) Has(fd protoreflect.FieldDes
 // associated with the given field number.
 //
 // Clear is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_QueryGetStoredGameResponse) Clear(fd protoreflect.FieldDescriptor) {
+func (x *fastReflection_QueryGetGameResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameResponse.stored_game":
+	case "checkerstorram.checkerstorram.QueryGetGameResponse.storedGame":
 		x.StoredGame = nil
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameResponse"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1358,16 +1357,16 @@ func (x *fastReflection_QueryGetStoredGameResponse) Clear(fd protoreflect.FieldD
 // the default value of a bytes scalar is guaranteed to be a copy.
 // For unpopulated composite types, it returns an empty, read-only view
 // of the value; to obtain a mutable reference, use Mutable.
-func (x *fastReflection_QueryGetStoredGameResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_QueryGetGameResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameResponse.stored_game":
+	case "checkerstorram.checkerstorram.QueryGetGameResponse.storedGame":
 		value := x.StoredGame
 		return protoreflect.ValueOfMessage(value.ProtoReflect())
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameResponse"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -1381,15 +1380,15 @@ func (x *fastReflection_QueryGetStoredGameResponse) Get(descriptor protoreflect.
 // empty, read-only value, then it panics.
 //
 // Set is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_QueryGetStoredGameResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
+func (x *fastReflection_QueryGetGameResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameResponse.stored_game":
+	case "checkerstorram.checkerstorram.QueryGetGameResponse.storedGame":
 		x.StoredGame = value.Message().Interface().(*StoredGame)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameResponse"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -1403,44 +1402,44 @@ func (x *fastReflection_QueryGetStoredGameResponse) Set(fd protoreflect.FieldDes
 // It panics if the field does not contain a composite type.
 //
 // Mutable is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_QueryGetStoredGameResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_QueryGetGameResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameResponse.stored_game":
+	case "checkerstorram.checkerstorram.QueryGetGameResponse.storedGame":
 		if x.StoredGame == nil {
 			x.StoredGame = new(StoredGame)
 		}
 		return protoreflect.ValueOfMessage(x.StoredGame.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameResponse"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameResponse does not contain field %s", fd.FullName()))
 	}
 }
 
 // NewField returns a new value that is assignable to the field
 // for the given descriptor. For scalars, this returns the default value.
 // For lists, maps, and messages, this returns a new, empty, mutable value.
-func (x *fastReflection_QueryGetStoredGameResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_QueryGetGameResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "checkerstorram.checkerstorram.QueryGetStoredGameResponse.stored_game":
+	case "checkerstorram.checkerstorram.QueryGetGameResponse.storedGame":
 		m := new(StoredGame)
 		return protoreflect.ValueOfMessage(m.ProtoReflect())
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetStoredGameResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: checkerstorram.checkerstorram.QueryGetGameResponse"))
 		}
-		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetStoredGameResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message checkerstorram.checkerstorram.QueryGetGameResponse does not contain field %s", fd.FullName()))
 	}
 }
 
 // WhichOneof reports which field within the oneof is populated,
 // returning nil if none are populated.
 // It panics if the oneof descriptor does not belong to this message.
-func (x *fastReflection_QueryGetStoredGameResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
+func (x *fastReflection_QueryGetGameResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in checkerstorram.checkerstorram.QueryGetStoredGameResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in checkerstorram.checkerstorram.QueryGetGameResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -1448,7 +1447,7 @@ func (x *fastReflection_QueryGetStoredGameResponse) WhichOneof(d protoreflect.On
 // GetUnknown retrieves the entire list of unknown fields.
 // The caller may only mutate the contents of the RawFields
 // if the mutated bytes are stored back into the message with SetUnknown.
-func (x *fastReflection_QueryGetStoredGameResponse) GetUnknown() protoreflect.RawFields {
+func (x *fastReflection_QueryGetGameResponse) GetUnknown() protoreflect.RawFields {
 	return x.unknownFields
 }
 
@@ -1459,7 +1458,7 @@ func (x *fastReflection_QueryGetStoredGameResponse) GetUnknown() protoreflect.Ra
 // An empty RawFields may be passed to clear the fields.
 //
 // SetUnknown is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_QueryGetStoredGameResponse) SetUnknown(fields protoreflect.RawFields) {
+func (x *fastReflection_QueryGetGameResponse) SetUnknown(fields protoreflect.RawFields) {
 	x.unknownFields = fields
 }
 
@@ -1471,7 +1470,7 @@ func (x *fastReflection_QueryGetStoredGameResponse) SetUnknown(fields protorefle
 // message type, but the details are implementation dependent.
 // Validity is not part of the protobuf data model, and may not
 // be preserved in marshaling or other operations.
-func (x *fastReflection_QueryGetStoredGameResponse) IsValid() bool {
+func (x *fastReflection_QueryGetGameResponse) IsValid() bool {
 	return x != nil
 }
 
@@ -1481,9 +1480,9 @@ func (x *fastReflection_QueryGetStoredGameResponse) IsValid() bool {
 // The returned methods type is identical to
 // "google.golang.org/protobuf/runtime/protoiface".Methods.
 // Consult the protoiface package documentation for details.
-func (x *fastReflection_QueryGetStoredGameResponse) ProtoMethods() *protoiface.Methods {
+func (x *fastReflection_QueryGetGameResponse) ProtoMethods() *protoiface.Methods {
 	size := func(input protoiface.SizeInput) protoiface.SizeOutput {
-		x := input.Message.Interface().(*QueryGetStoredGameResponse)
+		x := input.Message.Interface().(*QueryGetGameResponse)
 		if x == nil {
 			return protoiface.SizeOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -1509,7 +1508,7 @@ func (x *fastReflection_QueryGetStoredGameResponse) ProtoMethods() *protoiface.M
 	}
 
 	marshal := func(input protoiface.MarshalInput) (protoiface.MarshalOutput, error) {
-		x := input.Message.Interface().(*QueryGetStoredGameResponse)
+		x := input.Message.Interface().(*QueryGetGameResponse)
 		if x == nil {
 			return protoiface.MarshalOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -1553,7 +1552,7 @@ func (x *fastReflection_QueryGetStoredGameResponse) ProtoMethods() *protoiface.M
 		}, nil
 	}
 	unmarshal := func(input protoiface.UnmarshalInput) (protoiface.UnmarshalOutput, error) {
-		x := input.Message.Interface().(*QueryGetStoredGameResponse)
+		x := input.Message.Interface().(*QueryGetGameResponse)
 		if x == nil {
 			return protoiface.UnmarshalOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -1585,10 +1584,10 @@ func (x *fastReflection_QueryGetStoredGameResponse) ProtoMethods() *protoiface.M
 			fieldNum := int32(wire >> 3)
 			wireType := int(wire & 0x7)
 			if wireType == 4 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: QueryGetStoredGameResponse: wiretype end group for non-group")
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: QueryGetGameResponse: wiretype end group for non-group")
 			}
 			if fieldNum <= 0 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: QueryGetStoredGameResponse: illegal tag %d (wire type %d)", fieldNum, wire)
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: QueryGetGameResponse: illegal tag %d (wire type %d)", fieldNum, wire)
 			}
 			switch fieldNum {
 			case 1:
@@ -1739,8 +1738,8 @@ func (x *QueryParamsResponse) GetParams() *Params {
 	return nil
 }
 
-// QueryGetStoredGameRequest is the request type for querying a stored game
-type QueryGetStoredGameRequest struct {
+// QueryGetGameRequest is request type for the Query/GetGame method
+type QueryGetGameRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -1748,8 +1747,8 @@ type QueryGetStoredGameRequest struct {
 	Index string `protobuf:"bytes,1,opt,name=index,proto3" json:"index,omitempty"`
 }
 
-func (x *QueryGetStoredGameRequest) Reset() {
-	*x = QueryGetStoredGameRequest{}
+func (x *QueryGetGameRequest) Reset() {
+	*x = QueryGetGameRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_checkerstorram_checkerstorram_query_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1757,35 +1756,35 @@ func (x *QueryGetStoredGameRequest) Reset() {
 	}
 }
 
-func (x *QueryGetStoredGameRequest) String() string {
+func (x *QueryGetGameRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*QueryGetStoredGameRequest) ProtoMessage() {}
+func (*QueryGetGameRequest) ProtoMessage() {}
 
-// Deprecated: Use QueryGetStoredGameRequest.ProtoReflect.Descriptor instead.
-func (*QueryGetStoredGameRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use QueryGetGameRequest.ProtoReflect.Descriptor instead.
+func (*QueryGetGameRequest) Descriptor() ([]byte, []int) {
 	return file_checkerstorram_checkerstorram_query_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *QueryGetStoredGameRequest) GetIndex() string {
+func (x *QueryGetGameRequest) GetIndex() string {
 	if x != nil {
 		return x.Index
 	}
 	return ""
 }
 
-// QueryGetStoredGameResponse is the response type for querying a stored game
-type QueryGetStoredGameResponse struct {
+// QueryGetGameResponse is response type for the Query/GetGame method
+type QueryGetGameResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	StoredGame *StoredGame `protobuf:"bytes,1,opt,name=stored_game,json=storedGame,proto3" json:"stored_game,omitempty"`
+	StoredGame *StoredGame `protobuf:"bytes,1,opt,name=storedGame,proto3" json:"storedGame,omitempty"`
 }
 
-func (x *QueryGetStoredGameResponse) Reset() {
-	*x = QueryGetStoredGameResponse{}
+func (x *QueryGetGameResponse) Reset() {
+	*x = QueryGetGameResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_checkerstorram_checkerstorram_query_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1793,18 +1792,18 @@ func (x *QueryGetStoredGameResponse) Reset() {
 	}
 }
 
-func (x *QueryGetStoredGameResponse) String() string {
+func (x *QueryGetGameResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*QueryGetStoredGameResponse) ProtoMessage() {}
+func (*QueryGetGameResponse) ProtoMessage() {}
 
-// Deprecated: Use QueryGetStoredGameResponse.ProtoReflect.Descriptor instead.
-func (*QueryGetStoredGameResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use QueryGetGameResponse.ProtoReflect.Descriptor instead.
+func (*QueryGetGameResponse) Descriptor() ([]byte, []int) {
 	return file_checkerstorram_checkerstorram_query_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *QueryGetStoredGameResponse) GetStoredGame() *StoredGame {
+func (x *QueryGetGameResponse) GetStoredGame() *StoredGame {
 	if x != nil {
 		return x.StoredGame
 	}
@@ -1818,77 +1817,73 @@ var file_checkerstorram_checkerstorram_query_proto_rawDesc = []byte{
 	0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f,
 	0x71, 0x75, 0x65, 0x72, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x1d, 0x63, 0x68, 0x65,
 	0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63,
-	0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x1a, 0x11, 0x61, 0x6d, 0x69, 0x6e,
-	0x6f, 0x2f, 0x61, 0x6d, 0x69, 0x6e, 0x6f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x14, 0x67,
-	0x6f, 0x67, 0x6f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x67, 0x6f, 0x67, 0x6f, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x1a, 0x1c, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x70, 0x69, 0x2f,
-	0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x1a, 0x2a, 0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73, 0x2f, 0x62, 0x61, 0x73, 0x65, 0x2f, 0x71,
-	0x75, 0x65, 0x72, 0x79, 0x2f, 0x76, 0x31, 0x62, 0x65, 0x74, 0x61, 0x31, 0x2f, 0x70, 0x61, 0x67,
-	0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2a, 0x63,
-	0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x63, 0x68,
-	0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x70, 0x61, 0x72,
-	0x61, 0x6d, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b,
-	0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65,
-	0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x5f,
-	0x67, 0x61, 0x6d, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x14, 0x0a, 0x12, 0x51, 0x75,
-	0x65, 0x72, 0x79, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x22, 0x5f, 0x0a, 0x13, 0x51, 0x75, 0x65, 0x72, 0x79, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x48, 0x0a, 0x06, 0x70, 0x61, 0x72, 0x61, 0x6d,
-	0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x25, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65,
-	0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
-	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x42, 0x09,
-	0xc8, 0xde, 0x1f, 0x00, 0xa8, 0xe7, 0xb0, 0x2a, 0x01, 0x52, 0x06, 0x70, 0x61, 0x72, 0x61, 0x6d,
-	0x73, 0x22, 0x31, 0x0a, 0x19, 0x51, 0x75, 0x65, 0x72, 0x79, 0x47, 0x65, 0x74, 0x53, 0x74, 0x6f,
-	0x72, 0x65, 0x64, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14,
-	0x0a, 0x05, 0x69, 0x6e, 0x64, 0x65, 0x78, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x69,
-	0x6e, 0x64, 0x65, 0x78, 0x22, 0x6e, 0x0a, 0x1a, 0x51, 0x75, 0x65, 0x72, 0x79, 0x47, 0x65, 0x74,
-	0x53, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x12, 0x50, 0x0a, 0x0b, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x5f, 0x67, 0x61, 0x6d,
-	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x29, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65,
-	0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
-	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x53, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x47, 0x61,
-	0x6d, 0x65, 0x42, 0x04, 0xc8, 0xde, 0x1f, 0x00, 0x52, 0x0a, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x64,
-	0x47, 0x61, 0x6d, 0x65, 0x32, 0xed, 0x02, 0x0a, 0x05, 0x51, 0x75, 0x65, 0x72, 0x79, 0x12, 0x9f,
-	0x01, 0x0a, 0x06, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0x31, 0x2e, 0x63, 0x68, 0x65, 0x63,
-	0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b,
-	0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79, 0x50,
-	0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x32, 0x2e, 0x63,
-	0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68,
-	0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x51, 0x75, 0x65,
-	0x72, 0x79, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x28, 0x12, 0x26, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b,
-	0x65, 0x72, 0x73, 0x2d, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b,
+	0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x1a, 0x14, 0x67, 0x6f, 0x67, 0x6f,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x67, 0x6f, 0x67, 0x6f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x1a, 0x1c, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x61, 0x6e, 0x6e,
+	0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2a,
+	0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73, 0x2f, 0x62, 0x61, 0x73, 0x65, 0x2f, 0x71, 0x75, 0x65, 0x72,
+	0x79, 0x2f, 0x76, 0x31, 0x62, 0x65, 0x74, 0x61, 0x31, 0x2f, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2a, 0x63, 0x68, 0x65, 0x63,
+	0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b,
 	0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73,
-	0x12, 0xc1, 0x01, 0x0a, 0x0d, 0x47, 0x65, 0x74, 0x53, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x47, 0x61,
-	0x6d, 0x65, 0x12, 0x38, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73,
+	0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74,
+	0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x5f, 0x67, 0x61, 0x6d,
+	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x14, 0x0a, 0x12, 0x51, 0x75, 0x65, 0x72, 0x79,
+	0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x5a, 0x0a,
+	0x13, 0x51, 0x75, 0x65, 0x72, 0x79, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x43, 0x0a, 0x06, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x25, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74,
+	0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x2e, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x42, 0x04, 0xc8, 0xde, 0x1f,
+	0x00, 0x52, 0x06, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x22, 0x2b, 0x0a, 0x13, 0x51, 0x75, 0x65,
+	0x72, 0x79, 0x47, 0x65, 0x74, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x14, 0x0a, 0x05, 0x69, 0x6e, 0x64, 0x65, 0x78, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x05, 0x69, 0x6e, 0x64, 0x65, 0x78, 0x22, 0x67, 0x0a, 0x14, 0x51, 0x75, 0x65, 0x72, 0x79, 0x47,
+	0x65, 0x74, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x4f,
+	0x0a, 0x0a, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x47, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x0b, 0x32, 0x29, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72,
 	0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72,
-	0x61, 0x6d, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79, 0x47, 0x65, 0x74, 0x53, 0x74, 0x6f, 0x72, 0x65,
-	0x64, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x39, 0x2e, 0x63,
-	0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68,
-	0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x51, 0x75, 0x65,
-	0x72, 0x79, 0x47, 0x65, 0x74, 0x53, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x47, 0x61, 0x6d, 0x65, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x3b, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x35, 0x12,
-	0x33, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x2d, 0x74, 0x6f, 0x72, 0x72, 0x61,
-	0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d,
-	0x2f, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x5f, 0x67, 0x61, 0x6d, 0x65, 0x2f, 0x7b, 0x69, 0x6e,
-	0x64, 0x65, 0x78, 0x7d, 0x42, 0xf7, 0x01, 0x0a, 0x21, 0x63, 0x6f, 0x6d, 0x2e, 0x63, 0x68, 0x65,
-	0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63,
-	0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x42, 0x0a, 0x51, 0x75, 0x65, 0x72,
-	0x79, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x31, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65,
-	0x72, 0x73, 0x2d, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x63, 0x68,
-	0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x63, 0x68, 0x65,
-	0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0xa2, 0x02, 0x03, 0x43, 0x43,
-	0x58, 0xaa, 0x02, 0x1d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72,
-	0x61, 0x6d, 0x2e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61,
-	0x6d, 0xca, 0x02, 0x1d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72,
-	0x61, 0x6d, 0x5c, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61,
-	0x6d, 0xe2, 0x02, 0x29, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72,
-	0x61, 0x6d, 0x5c, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61,
-	0x6d, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x1e,
-	0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x3a, 0x3a,
-	0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x62, 0x06,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x61, 0x6d, 0x2e, 0x53, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x47, 0x61, 0x6d, 0x65, 0x42, 0x04, 0xc8,
+	0xde, 0x1f, 0x00, 0x52, 0x0a, 0x73, 0x74, 0x6f, 0x72, 0x65, 0x64, 0x47, 0x61, 0x6d, 0x65, 0x32,
+	0xd5, 0x02, 0x0a, 0x05, 0x51, 0x75, 0x65, 0x72, 0x79, 0x12, 0x9f, 0x01, 0x0a, 0x06, 0x50, 0x61,
+	0x72, 0x61, 0x6d, 0x73, 0x12, 0x31, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74,
+	0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x32, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65,
+	0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
+	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79, 0x50, 0x61, 0x72,
+	0x61, 0x6d, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x2e, 0x82, 0xd3, 0xe4,
+	0x93, 0x02, 0x28, 0x12, 0x26, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x2d, 0x74,
+	0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x2f, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0xa9, 0x01, 0x0a, 0x07,
+	0x47, 0x65, 0x74, 0x47, 0x61, 0x6d, 0x65, 0x12, 0x32, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65,
+	0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72,
+	0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79, 0x47, 0x65, 0x74,
+	0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x33, 0x2e, 0x63, 0x68,
+	0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63, 0x68, 0x65,
+	0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x51, 0x75, 0x65, 0x72,
+	0x79, 0x47, 0x65, 0x74, 0x47, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x22, 0x35, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2f, 0x12, 0x2d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b,
+	0x65, 0x72, 0x73, 0x2d, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b,
+	0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x67, 0x61, 0x6d, 0x65, 0x73, 0x2f,
+	0x7b, 0x69, 0x6e, 0x64, 0x65, 0x78, 0x7d, 0x42, 0xf7, 0x01, 0x0a, 0x21, 0x63, 0x6f, 0x6d, 0x2e,
+	0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x63,
+	0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x42, 0x0a, 0x51,
+	0x75, 0x65, 0x72, 0x79, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x31, 0x63, 0x68, 0x65,
+	0x63, 0x6b, 0x65, 0x72, 0x73, 0x2d, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f, 0x61, 0x70, 0x69,
+	0x2f, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2f,
+	0x63, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61, 0x6d, 0xa2, 0x02,
+	0x03, 0x43, 0x43, 0x58, 0xaa, 0x02, 0x1d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74,
+	0x6f, 0x72, 0x72, 0x61, 0x6d, 0x2e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0xca, 0x02, 0x1d, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74,
+	0x6f, 0x72, 0x72, 0x61, 0x6d, 0x5c, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0xe2, 0x02, 0x29, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74,
+	0x6f, 0x72, 0x72, 0x61, 0x6d, 0x5c, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f,
+	0x72, 0x72, 0x61, 0x6d, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61,
+	0xea, 0x02, 0x1e, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61,
+	0x6d, 0x3a, 0x3a, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x65, 0x72, 0x73, 0x74, 0x6f, 0x72, 0x72, 0x61,
+	0x6d, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1905,20 +1900,20 @@ func file_checkerstorram_checkerstorram_query_proto_rawDescGZIP() []byte {
 
 var file_checkerstorram_checkerstorram_query_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_checkerstorram_checkerstorram_query_proto_goTypes = []interface{}{
-	(*QueryParamsRequest)(nil),         // 0: checkerstorram.checkerstorram.QueryParamsRequest
-	(*QueryParamsResponse)(nil),        // 1: checkerstorram.checkerstorram.QueryParamsResponse
-	(*QueryGetStoredGameRequest)(nil),  // 2: checkerstorram.checkerstorram.QueryGetStoredGameRequest
-	(*QueryGetStoredGameResponse)(nil), // 3: checkerstorram.checkerstorram.QueryGetStoredGameResponse
-	(*Params)(nil),                     // 4: checkerstorram.checkerstorram.Params
-	(*StoredGame)(nil),                 // 5: checkerstorram.checkerstorram.StoredGame
+	(*QueryParamsRequest)(nil),   // 0: checkerstorram.checkerstorram.QueryParamsRequest
+	(*QueryParamsResponse)(nil),  // 1: checkerstorram.checkerstorram.QueryParamsResponse
+	(*QueryGetGameRequest)(nil),  // 2: checkerstorram.checkerstorram.QueryGetGameRequest
+	(*QueryGetGameResponse)(nil), // 3: checkerstorram.checkerstorram.QueryGetGameResponse
+	(*Params)(nil),               // 4: checkerstorram.checkerstorram.Params
+	(*StoredGame)(nil),           // 5: checkerstorram.checkerstorram.StoredGame
 }
 var file_checkerstorram_checkerstorram_query_proto_depIdxs = []int32{
 	4, // 0: checkerstorram.checkerstorram.QueryParamsResponse.params:type_name -> checkerstorram.checkerstorram.Params
-	5, // 1: checkerstorram.checkerstorram.QueryGetStoredGameResponse.stored_game:type_name -> checkerstorram.checkerstorram.StoredGame
+	5, // 1: checkerstorram.checkerstorram.QueryGetGameResponse.storedGame:type_name -> checkerstorram.checkerstorram.StoredGame
 	0, // 2: checkerstorram.checkerstorram.Query.Params:input_type -> checkerstorram.checkerstorram.QueryParamsRequest
-	2, // 3: checkerstorram.checkerstorram.Query.GetStoredGame:input_type -> checkerstorram.checkerstorram.QueryGetStoredGameRequest
+	2, // 3: checkerstorram.checkerstorram.Query.GetGame:input_type -> checkerstorram.checkerstorram.QueryGetGameRequest
 	1, // 4: checkerstorram.checkerstorram.Query.Params:output_type -> checkerstorram.checkerstorram.QueryParamsResponse
-	3, // 5: checkerstorram.checkerstorram.Query.GetStoredGame:output_type -> checkerstorram.checkerstorram.QueryGetStoredGameResponse
+	3, // 5: checkerstorram.checkerstorram.Query.GetGame:output_type -> checkerstorram.checkerstorram.QueryGetGameResponse
 	4, // [4:6] is the sub-list for method output_type
 	2, // [2:4] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -1959,7 +1954,7 @@ func file_checkerstorram_checkerstorram_query_proto_init() {
 			}
 		}
 		file_checkerstorram_checkerstorram_query_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryGetStoredGameRequest); i {
+			switch v := v.(*QueryGetGameRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1971,7 +1966,7 @@ func file_checkerstorram_checkerstorram_query_proto_init() {
 			}
 		}
 		file_checkerstorram_checkerstorram_query_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryGetStoredGameResponse); i {
+			switch v := v.(*QueryGetGameResponse); i {
 			case 0:
 				return &v.state
 			case 1:

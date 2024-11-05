@@ -8,8 +8,7 @@ import (
 
 func RegisterInterfaces(registry cdctypes.InterfaceRegistry) {
 	registry.RegisterImplementations((*sdk.Msg)(nil),
-		&MsgUpdateParams{},
-		&ReqCheckersTorram{}, // Add our new message type
+		&ReqCheckersTorram{},
 	)
 
 	// Register the CheckersTorram service instead of Msg

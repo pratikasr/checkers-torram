@@ -2,6 +2,7 @@ package keeper
 
 import (
 	"testing"
+	"time"
 
 	"cosmossdk.io/log"
 	"cosmossdk.io/store"
@@ -41,12 +42,9 @@ func CheckerstorramKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {
 		nil,
 	)
 
-	ctx := sdk.NewContext(stateStore, cmtproto.Header{}, false, log.NewNopLogger())
-
-	// Initialize params
-	if err := k.SetParams(ctx, types.DefaultParams()); err != nil {
-		panic(err)
-	}
+	// Set a fixed test time
+	testTime := time.Now().UTC()
+	ctx := sdk.NewContext(stateStore, cmtproto.Header{Time: testTime}, false, log.NewNopLogger())
 
 	return k, ctx
 }

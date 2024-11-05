@@ -5,6 +5,7 @@ import (
 	"context"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"strconv"
+	"time"
 )
 
 type msgServer struct {
@@ -26,6 +27,12 @@ func (k msgServer) CheckersCreateGm(goCtx context.Context, msg *types.ReqChecker
 	count := k.GetGameCount(ctx)
 	newIndex := strconv.FormatUint(count, 10)
 
+	// Ensure we have a valid block time, default to current time if not set
+	blockTime := ctx.BlockTime()
+	if blockTime.IsZero() {
+		blockTime = time.Now().UTC()
+	}
+
 	// Create new game with timestamps
 	game := types.StoredGame{
 		Index:         newIndex,
@@ -33,7 +40,7 @@ func (k msgServer) CheckersCreateGm(goCtx context.Context, msg *types.ReqChecker
 		Turn:          "b",
 		Black:         msg.Black,
 		Red:           msg.Red,
-		GameStartTime: ctx.BlockTime().Unix(),
+		GameStartTime: blockTime.Unix(),
 		GameEndTime:   0, // Will be set when game ends
 	}
 

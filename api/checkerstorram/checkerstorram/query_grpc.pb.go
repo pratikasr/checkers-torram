@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Query_Params_FullMethodName        = "/checkerstorram.checkerstorram.Query/Params"
-	Query_GetStoredGame_FullMethodName = "/checkerstorram.checkerstorram.Query/GetStoredGame"
+	Query_Params_FullMethodName  = "/checkerstorram.checkerstorram.Query/Params"
+	Query_GetGame_FullMethodName = "/checkerstorram.checkerstorram.Query/GetGame"
 )
 
 // QueryClient is the client API for Query service.
@@ -29,8 +29,8 @@ const (
 type QueryClient interface {
 	// Parameters queries the parameters of the module.
 	Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error)
-	// GetStoredGame returns the stored game at the specified index
-	GetStoredGame(ctx context.Context, in *QueryGetStoredGameRequest, opts ...grpc.CallOption) (*QueryGetStoredGameResponse, error)
+	// GetGame queries a stored game by index
+	GetGame(ctx context.Context, in *QueryGetGameRequest, opts ...grpc.CallOption) (*QueryGetGameResponse, error)
 }
 
 type queryClient struct {
@@ -50,9 +50,9 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 	return out, nil
 }
 
-func (c *queryClient) GetStoredGame(ctx context.Context, in *QueryGetStoredGameRequest, opts ...grpc.CallOption) (*QueryGetStoredGameResponse, error) {
-	out := new(QueryGetStoredGameResponse)
-	err := c.cc.Invoke(ctx, Query_GetStoredGame_FullMethodName, in, out, opts...)
+func (c *queryClient) GetGame(ctx context.Context, in *QueryGetGameRequest, opts ...grpc.CallOption) (*QueryGetGameResponse, error) {
+	out := new(QueryGetGameResponse)
+	err := c.cc.Invoke(ctx, Query_GetGame_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -65,8 +65,8 @@ func (c *queryClient) GetStoredGame(ctx context.Context, in *QueryGetStoredGameR
 type QueryServer interface {
 	// Parameters queries the parameters of the module.
 	Params(context.Context, *QueryParamsRequest) (*QueryParamsResponse, error)
-	// GetStoredGame returns the stored game at the specified index
-	GetStoredGame(context.Context, *QueryGetStoredGameRequest) (*QueryGetStoredGameResponse, error)
+	// GetGame queries a stored game by index
+	GetGame(context.Context, *QueryGetGameRequest) (*QueryGetGameResponse, error)
 	mustEmbedUnimplementedQueryServer()
 }
 
@@ -77,8 +77,8 @@ type UnimplementedQueryServer struct {
 func (UnimplementedQueryServer) Params(context.Context, *QueryParamsRequest) (*QueryParamsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Params not implemented")
 }
-func (UnimplementedQueryServer) GetStoredGame(context.Context, *QueryGetStoredGameRequest) (*QueryGetStoredGameResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetStoredGame not implemented")
+func (UnimplementedQueryServer) GetGame(context.Context, *QueryGetGameRequest) (*QueryGetGameResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetGame not implemented")
 }
 func (UnimplementedQueryServer) mustEmbedUnimplementedQueryServer() {}
 
@@ -111,20 +111,20 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Query_GetStoredGame_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(QueryGetStoredGameRequest)
+func _Query_GetGame_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(QueryGetGameRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(QueryServer).GetStoredGame(ctx, in)
+		return srv.(QueryServer).GetGame(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Query_GetStoredGame_FullMethodName,
+		FullMethod: Query_GetGame_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(QueryServer).GetStoredGame(ctx, req.(*QueryGetStoredGameRequest))
+		return srv.(QueryServer).GetGame(ctx, req.(*QueryGetGameRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -141,8 +141,8 @@ var Query_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _Query_Params_Handler,
 		},
 		{
-			MethodName: "GetStoredGame",
-			Handler:    _Query_GetStoredGame_Handler,
+			MethodName: "GetGame",
+			Handler:    _Query_GetGame_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
